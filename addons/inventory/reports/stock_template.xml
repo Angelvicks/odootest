@@ -1,0 +1,106 @@
+ <odoo>
+ 
+ <template id="report_pvdereception">
+      <t t-call="web.html_container">
+         <t t-foreach="docs" t-as="doc">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <div class="oe_structure"/>
+                           <div>
+                              <table>
+                                <tr>
+
+                                  <td>
+                                    <table>
+                                      <tr>
+                                        <td>
+                                            <span>
+                                                <strong>Région:</strong>
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span>:</span>
+                                        </td>
+                                        <td>
+                                            <span t-field="doc.region"/>
+                                        </td>
+                                      </tr>
+
+                                      <tr>
+                                        <td>
+                                            <span>
+                                                <strong>District de santé:</strong>
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span>:</span>
+                                        </td>
+                                        <td>
+                                            <span t-field="doc.district_sante"/>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+
+                                  <td>
+                                    <table>
+                                       <tr>
+                                         <td>
+                                            <span>
+                                                <strong>Aire de santé:</strong>
+                                            </span>
+                                            </td>
+                                            <td>
+                                                <span>:</span>
+                                            </td>
+                                            <td>
+                                                <span t-field="doc.aire_sante"/>
+                                            </td>
+                                       </tr>
+
+                                       <tr>
+                                         <td>
+                                            <span>
+                                                <strong>Nom de la Structure:</strong>
+                                            </span>
+                                            </td>
+                                            <td>
+                                                <span>:</span>
+                                            </td>
+                                            <td>
+                                                <span t-field="doc.nom_de_la_structure"/>
+                                            </td>
+                                       </tr>
+                                    </table>
+                                  </td>
+
+
+                                </tr>
+                              </table>
+
+                           </div>
+                            <h2>PV de Reception</h2>
+                            <p >Numero des Produits<t t-esc="doc.display_name" /></p>
+                            <p>Aire de sante<t t-esc="doc.aire_sante" /></p>
+                            <p>Region<t t-esc="doc.region"/></p>
+                    </div> 
+                </t>   
+         </t>
+      </t>
+   </template>
+        <!--<template id="report_product">
+   <t t-call="web.html_container">
+       <t t-foreach="docs" t-as="o">
+           <t t-call="web.external_layout">
+               <div class="page">
+                   <div class="oe_structure"/>
+                   <h2>Product Report</h2>
+                   <p><span t-field="o.name"/></p>
+               </div>
+           </t>
+       </t>
+   </t>
+</template>
+-->
+        
+</odoo>

@@ -1,0 +1,142 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+     <record id="product_product_form" model="ir.ui.view">
+            <field name="name">product_product_form</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_normal_form_view"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='uom_po_id']" position="after">
+                   <field name="aire_sante"/>
+                </xpath>
+
+                <xpath expr="//field[@name='uom_po_id']" position="after">
+                   <field name="region"/>
+                </xpath>
+
+                <xpath expr="//field[@name='uom_po_id']" position="after">
+                   <field name="num_PVR"/>
+                </xpath>
+
+                <xpath expr="//field[@name='uom_po_id']" position="after">
+                   <field name="num_bc"/>
+                </xpath>
+
+                <xpath expr="//field[@name='uom_po_id']" position="after">
+                   <field name="num_bl"/>
+                </xpath>
+
+                <xpath expr="//field[@name='uom_po_id']" position="after">
+                   <field name="nom_de_la_structure"/>
+                </xpath>
+
+                <xpath expr="//field[@name='uom_po_id']" position="after">
+                   <field name="nom_DCI"/>
+                </xpath> 
+
+
+            </field>
+      </record>
+
+  <!--  <record id="product_template_form" model="ir.ui.view">
+            <field name="name">product.template.form</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_only_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='uom_po_id']" position="before">
+                   <field name="date_de_reception"/>
+                </xpath>
+
+                <xpath expr="//field[@name='default_code']" position="attributes">
+                   <attribute name="invisible">0</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='default_code']" position="after">
+                   <field name="fournisseur"/>
+                </xpath>
+
+                <xpath expr="//field[@name='barcode']" position="after">
+                   <field name="numero_de_lot"/>
+                </xpath>
+
+                <xpath expr="//field[@name='uom_po_id']" position="after">
+                   <field name="conditionement"/>
+                </xpath>
+
+                <xpath expr="//field[@name='uom_po_id']" position="after">
+                   <field name="dosage"/>
+                </xpath>
+          
+            </field>
+      </record>  
+
+      <record id="stock_storage_category" model="ir.ui.view">
+            <field name="name">stock.storage.category</field>
+            <field name="model">stock.storage.category.capacity</field>
+            <field name="inherit_id" ref="stock.stock_storage_category_capacity_tree"/>
+            <field name="arch" type="xml">
+               
+                <xpath expr="//field[@name='product_id']" position="attributes">
+                   <attribute name="invisible">0</attribute>
+                </xpath>
+
+            </field>
+      </record>  -->
+<!--
+    <record model="ir.ui.view" id="inventory.list">
+      <field name="name">inventory list</field>
+      <field name="model">inventory.inventory</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="inventory.action_window">
+      <field name="name">inventory window</field>
+      <field name="res_model">inventory.inventory</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="inventory.action_server">
+      <field name="name">inventory server</field>
+      <field name="model_id" ref="model_inventory_inventory"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="inventory" id="inventory.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="inventory.menu_1" parent="inventory.menu_root"/>
+    <menuitem name="Menu 2" id="inventory.menu_2" parent="inventory.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="inventory.menu_1_list" parent="inventory.menu_1"
+              action="inventory.action_window"/>
+    <menuitem name="Server to list" id="inventory" parent="inventory.menu_2"
+              action="inventory.action_server"/>
+-->
+  </data>
+</odoo>

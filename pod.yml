@@ -1,0 +1,39 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: odoo
+spec:
+  containers:
+    - name: odoo
+      image: odoo:16.0
+      ports:
+        - containerPort: 8069
+      volumeMounts:
+        - name: web-data
+          mountPath: /var/lib/odoo
+        - name: odoo-conf
+          mountPath: /etc/odoo
+        - name: extra-addons
+          mountPath: /mnt/extra-addons
+      env:
+        - name: POSTGRES_USER
+          value: "odoo"
+        - name: POSTGRES_PASSWORD
+          value: "odoo"
+  
+        - name: Host
+          value: "postgres.local"
+        - name: PORT
+          value: "30007"
+    
+     
+  volumes:
+    - name: web-data 
+      hostPath:
+        path: /run/desktop/mnt/host/c/Users/Ange TAFFO/Documents/mavou/odootest/volumes/odoo/web-data
+    - name: odoo-conf
+      hostPath:
+        path: /run/desktop/mnt/host/c/Users/Ange TAFFO/Documents/mavou/odootest/volumes/odoo/conf
+    - name: extra-addons
+      hostPath:
+        path: /run/desktop/mnt/host/c/Users/Ange TAFFO/Documents/mavou/odootest/addons

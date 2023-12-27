@@ -1,0 +1,11 @@
+build-job:
+  stage: build
+  variables:
+    ADDONS_DIR: /mnt/extra-addons
+  script:
+    - kubectl apply -f path/to/your/kubernetes/config.yaml
+    - kubectl logs -l app=odoo >> logs/odoo-server.log
+    - kubectl delete -f path/to/your/kubernetes/config.yaml
+  artifacts:
+    paths:
+      - logs/odoo-server.log
