@@ -6,8 +6,57 @@
                 <t t-call="web.external_layout">
                     <div class="page">
                         <div class="oe_structure"/>
-                           <div>
-                              <table>
+                           <div> 
+                           <h1 style="text-align:center;">Rapport de Réception des Produits</h1><br/>
+                            <div class="row p-3 text-center">
+                                <div class="col-3">
+
+                                    <span >Region :    <span t-field="doc.region"/></span>
+                                </div>
+                                <div class="col-3">
+                                    <p>Aire de Santé : </p>
+                                </div>
+
+                                <div class="col-6">
+                                    <span>Fournisseur</span>
+                                    <span t-field="doc.partner_id"></span>
+
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <span> Date livraison :  
+
+                                            <!--  <span t-field="doc.expiration_time"/> -->
+
+                                              <span t-field="doc.expiration_time"/>
+
+                                            </span>
+                                            
+
+                                            <p> N° BL </p>
+                                          <!--   <span t-field="doc.num_bl"/> -->
+
+                                        </div>
+                                        <div class="col-6">
+                                            <span>N° PVR: 
+
+                                              <span t-field="doc.num_PVR"/>
+
+                                            </span>
+                                            
+
+                                            <p>N°BC: </p>
+                                          <!--  <span t-field="doc.num_BC"/> -->
+                                        
+                                        </div>
+
+                                        
+                                    </div>
+                               
+                                    
+                                </div>
+                                
+                            </div>
+                              <table >
                                 <tr>
 
                                   <td>
