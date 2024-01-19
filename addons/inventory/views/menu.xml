@@ -1,0 +1,16 @@
+<odoo>
+  <data>
+
+    <!-- Top menu item -->
+
+    <!-- menu categories -->
+    <!-- <menuitem name="Cashiers" id="caisse_et_pdv.menu_cashier" parent="point_of_sale.menu_point_root"/> -->
+
+    <!-- sub menu categories 
+    
+
+    <menuitem name="DCI" id="inventory.dci_menu" parent="stock.menu_product_in_config_stock"
+          action="product.attribute_action"/> -->
+
+  </data>
+</odoo>

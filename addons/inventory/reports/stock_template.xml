@@ -9,43 +9,45 @@
                            <div> 
                            <h1 style="text-align:center;">Rapport de Réception des Produits</h1><br/>
                             <div class="row p-3 text-center">
-                                <div class="col-3">
 
-                                    <span >Region :    <span t-field="doc.region"/></span>
-                                </div>
                                 <div class="col-3">
-                                    <p>Aire de Santé : </p>
+                                    <p><span >Region : </span> <span t-field="doc.region"/> </p>
+                                    <p> <span> District de santé : </span>
+                                    <span t-field="doc.district_sante"></span></p>
+                                </div>
+
+                                <div class="col-3">
+                                  <p>
+                                    <span>Aire de Santé : </span>
+                                    <span t-field="doc.aire_sante"/> </p>
+                                  
+                                  <p>
+                                    <span>Nom de la Structure : </span>
+                                    <span t-field="doc.nom_de_la_structure" />  
+                                  </p>
+
+
                                 </div>
 
                                 <div class="col-6">
-                                    <span>Fournisseur</span>
-                                    <span t-field="doc.partner_id"></span>
+                                    <p class="text-center"> <span>Fournisseur : </span>
+                                    <span t-field="doc.partner_id"></span> </p>
 
                                     <div class="row">
                                         <div class="col-6">
-                                            <span> Date livraison :  
-
-                                            <!--  <span t-field="doc.expiration_time"/> -->
-
-                                              <span t-field="doc.expiration_time"/>
-
-                                            </span>
+                                           <p> <span> Date livraison :</span>
+                                            <span t-field="doc.expiration_time"> Jours </span> </p>
                                             
-
-                                            <p> N° BL </p>
-                                          <!--   <span t-field="doc.num_bl"/> -->
+                                            <p> N° BL <span t-field="doc.num_bl"/> </p>
+                                          <!--    -->
 
                                         </div>
                                         <div class="col-6">
                                             <span>N° PVR: 
-
                                               <span t-field="doc.num_PVR"/>
-
                                             </span>
-                                            
 
-                                            <p>N°BC: </p>
-                                          <!--  <span t-field="doc.num_BC"/> -->
+                                            <p>N°BC :  <span t-field="doc.num_bc"/> </p>
                                         
                                         </div>
 
@@ -56,82 +58,109 @@
                                 </div>
                                 
                             </div>
-                              <table >
-                                <tr>
+                              <table class="table">
+                                <thead>
+                                   <tr>
+                                        <th name="th_numero" class="text-start">
+                                            <span>N° d'ordre</span>
+                                        </th>
+                                        <th name="th_nom" class="text-start">
+                                            <span>Nom (DCI) </span>
+                                        </th>
+                                        <th name="th_dosage" class="text-start">
+                                            <span>Dosage</span>
+                                        </th>
+                                        <th name="th_forme" class="text-start">
+                                            <span>Forme Galénique</span>
+                                        </th>
+                                        <th name="th_conditionement" class="text-start">
+                                            <span>Conditionement</span>
+                                        </th>
+                                        <th name="th_quantité" class="text-start">
+                                            <span>Quantité (Bon de Livraison)</span>
+                                        </th>
+                                        <th name="th_qtitéRe" class="text-start">
+                                            <span>Quantité Reçue</span>
+                                        </th>
+                                        <th name="th_numérodelot" class="text-start">
+                                            <span>Numéro de Lot</span>
+                                        </th>
+                                        <th name="th_date" class="text-start">
+                                            <span>Date de Péremption</span>
+                                        </th>
+                                        <th name="th_fabricant" class="text-start">
+                                            <span>Fabricant</span>
+                                        </th>
+                                         <th name="th_écart" class="text-start">
+                                            <span>Ecart</span>
+                                        </th>
+                                        <th name="th_qtitéRej" class="text-start">
+                                            <span>Quantité Rejetée</span>
+                                        </th>
+                                         <th name="th_qtitéAcc" class="text-start">
+                                            <span>Quantité Acceptée</span>
+                                        </th>
+                                         <th name="th_observations" class="text-start">
+                                            <span>Oberservation</span>
+                                        </th>
+                            
+                                    </tr>
+                                </thead>
 
-                                  <td>
-                                    <table>
-                                      <tr>
+                              <!--  <tbody>
+                                 <t t-foreach="doc.product_fournisseur_ids" t-as="doc"> -->
+                                  <tr>
                                         <td>
-                                            <span>
-                                                <strong>Région:</strong>
-                                            </span>
+                                            <span t-field="doc.id"/>
                                         </td>
                                         <td>
-                                            <span>:</span>
+                                            <span t-field="doc.dci_id"/>
+                                        </td>    
+                                        <td>
+                                            <span t-field="doc.dci_id.dosage"/>
                                         </td>
                                         <td>
-                                            <span t-field="doc.region"/>
-                                        </td>
-                                      </tr>
-
-                                      <tr>
-                                        <td>
-                                            <span>
-                                                <strong>District de santé:</strong>
-                                            </span>
+                                            <span t-field="doc.dci_id.forme"/>
                                         </td>
                                         <td>
-                                            <span>:</span>
+                                            <span t-field="doc.packaging_names"/>
                                         </td>
                                         <td>
-                                            <span t-field="doc.district_sante"/>
+                                            <span t-field="doc.lot_id"/>
                                         </td>
-                                      </tr>
-                                    </table>
-                                  </td>
+                                        <td>
+                                            <span t-field="doc.name"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="doc.lot_id"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="doc.expiration_date"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="doc.fabricant.name"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="doc.inventory_diff"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="doc.all_quantities"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="doc.all_inventory_diffs"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="doc.detailed_type"/>
+                                        </td>
 
-                                  <td>
-                                    <table>
-                                       <tr>
-                                         <td>
-                                            <span>
-                                                <strong>Aire de santé:</strong>
-                                            </span>
-                                            </td>
-                                            <td>
-                                                <span>:</span>
-                                            </td>
-                                            <td>
-                                                <span t-field="doc.aire_sante"/>
-                                            </td>
-                                       </tr>
+                                    </tr>
+                                <!-- </t> 
+                                </tbody> -->
 
-                                       <tr>
-                                         <td>
-                                            <span>
-                                                <strong>Nom de la Structure:</strong>
-                                            </span>
-                                            </td>
-                                            <td>
-                                                <span>:</span>
-                                            </td>
-                                            <td>
-                                                <span t-field="doc.nom_de_la_structure"/>
-                                            </td>
-                                       </tr>
-                                    </table>
-                                  </td>
-
-
-                                </tr>
                               </table>
 
                            </div>
-                            <h2>PV de Reception</h2>
-                            <p >Numero des Produits<t t-esc="doc.display_name" /></p>
-                            <p>Aire de sante<t t-esc="doc.aire_sante" /></p>
-                            <p>Region<t t-esc="doc.region"/></p>
+                            
                     </div> 
                 </t>   
          </t>

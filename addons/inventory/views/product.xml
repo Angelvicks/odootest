@@ -15,9 +15,9 @@
                    <field name="region"/>
                 </xpath>
 
-                <xpath expr="//field[@name='uom_po_id']" position="after">
+               <!-- <xpath expr="//field[@name='uom_po_id']" position="after">
                    <field name="num_PVR"/>
-                </xpath> 
+                </xpath> -->
 
                 <xpath expr="//field[@name='product_tag_ids']" position="after">
                    <field name="nom_de_la_structure"/>
@@ -27,10 +27,432 @@
                    <field name="district_sante"/>
                 </xpath>
 
+                <xpath expr="//field[@name='product_tag_ids']" position="after">
+                   <field name="atc_classe" string="Classe ATC"/>
+                </xpath> 
 
+                <xpath expr="//field[@name='product_tag_ids']" position="after">
+                   <field name="code_cip"/>
+                </xpath>
+
+                <xpath expr="//field[@name='aire_sante']" position="after">
+                   <field name="fabricant"/>
+                </xpath> 
+
+                <xpath expr="//field[@name='nom_de_la_structure']" position="after">
+                   <field name="dci_id"/>
+                </xpath>
+
+                <xpath expr="//field[@name='dci_id']" position="after">
+                   <field name="famille"/>
+                </xpath>
+
+                <xpath expr="//field[@name='nom_de_la_structure']" position="after">
+                   <field name="tableau"/>
+                </xpath>
+
+                <xpath expr="//field[@name='famille']" position="after">
+                   <field name="laboratoire_id"/>
+                </xpath>
+
+                <xpath expr="//field[@name='region']" position="after">
+                   <field name="contingente"/>
+                </xpath>
+
+                <xpath expr="//field[@name='nom_de_la_structure']" position="after">
+                   <field name="distributeur_id"/>
+                </xpath>
+
+                <xpath expr="//field[@name='fabricant']" position="after">
+                   <field name="gamme_id"/>
+                </xpath>
+
+                <xpath expr="//field[@name='fabricant']" position="after">
+                   <field name="couleur_id"/>
+                </xpath>
+
+                <xpath expr="//field[@name='laboratoire_id']" position="after">
+                   <field name="famille_id"/>
+                </xpath>
 
             </field>
       </record>
+
+      <record id="view_laboratoire_tree" model="ir.ui.view">
+        <field name="name">laboratoire.tree</field>
+        <field name="model">laboratoire</field>
+        <field name="arch" type="xml">
+            <tree string="Laboratoire">
+                <field name="code"/>
+                <field name="name"/>
+                <field name="contact_name"/>
+                <field name="tel"/>
+            </tree>
+        </field>
+    </record>
+	
+    <record id="view_laboratoire_form" model="ir.ui.view">
+        <field name="name">laboratoire.form</field>
+        <field name="model">laboratoire</field>
+        <field name="arch" type="xml">
+            <form string="Laboratoire">
+               <group col="4">
+                  <field name="code"/>
+                  <field name="name"/>
+                  <field name="contact_name"/>
+                  <field name="tel"/>
+               </group>
+            </form>
+        </field>
+    </record>
+	
+	<record id="view_laboratoire_filter" model="ir.ui.view">
+		<field name="name">laboratoire.list.select</field>
+		<field name="model">laboratoire</field>
+		<field name="priority" eval="15"/>
+		<field name="arch" type="xml">
+			<search string="Search Laboratoire">
+				<field name="code"/>
+            <field name="name"/>
+				<field name="contact_name"/>
+				<field name="tel"/>
+		   </search>
+		</field>
+	</record>
+	
+	<record id="action_laboratoire" model="ir.actions.act_window">
+		<field name="name">Laboratoire</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">laboratoire</field>
+		<field name="view_mode">tree,form</field>
+		<field name="search_view_id" ref="view_laboratoire_filter"/>
+		<field name="context">{}</field>
+		<field name="help" type="html">
+			<p class="o_view_nocontent_smiling_face">
+				Nouveau Laboratoire 
+			</p>
+		</field>
+	</record>
+
+    <menuitem id="inventory.laboratoire_menu"  parent="stock.menu_product_in_config_stock" action="action_laboratoire"
+     name="Laboratoire"/>
+
+	
+	<record id="view_gamme_tree" model="ir.ui.view">
+        <field name="name">gamme.tree</field>
+        <field name="model">gamme</field>
+        <field name="arch" type="xml">
+            <tree string="Gamme">
+                <field name="code"/>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+	
+    <record id="view_gamme_form" model="ir.ui.view">
+        <field name="name">gamme.form</field>
+        <field name="model">gamme</field>
+        <field name="arch" type="xml">
+            <form string="Gamme">
+               <group col="4">
+                  <field name="code"/>
+                  <field name="name"/>
+               </group>
+            </form>
+        </field>
+    </record>
+	
+	<record id="view_gamme_filter" model="ir.ui.view">
+		<field name="name">gamme.list.select</field>
+		<field name="model">gamme</field>
+		<field name="priority" eval="15"/>
+		<field name="arch" type="xml">
+			<search string="Search Gamme">
+				<field name="code"/>
+            <field name="name"/>
+		   </search>
+		</field>
+	</record>
+	
+	<record id="action_gamme" model="ir.actions.act_window">
+		<field name="name">Gamme</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">gamme</field>
+		<field name="view_mode">tree,form</field>
+		<field name="search_view_id" ref="view_gamme_filter"/>
+		<field name="context">{}</field>
+		<field name="help" type="html">
+			<p class="o_view_nocontent_smiling_face">
+				Nouvelle Gamme
+			</p>
+		</field>
+	</record>
+
+    <menuitem id="inventory.gamme_menu"  parent="stock.menu_product_in_config_stock" action="action_gamme"
+     name = "Gamme"/> 
+
+
+
+      <record id="product_template_tree" model="ir.ui.view">
+            <field name="name">product.template.tree</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_tree_view"/>
+            <field name="arch" type="xml">
+              <tree string="Product" multi_edit="1" sample="1">
+                <header>
+                  <button string="Print Labels" type="object" name="action_open_label_layout"/>
+                </header>
+                <field name="atc_classe" optional="hide"/>
+              </tree>
+            </field>
+      </record> 
+
+      <record id="product_template_search" model="ir.ui.view">
+        <field name="name">product.template.searches</field>
+        <field name="model">product.template</field>
+        <field name="arch" type="xml">
+            <search string="Product"> 
+               <field name="atc_classe" filter_domain="[('atc_classe', 'child_of', raw_value)]"/>
+                <separator/>
+                <group expand="1" string="Group By">
+                    <filter string="Classe ATC" name="atc_classe" context="{'group_by':'atc_classe'}"/>
+                </group>
+            </search>
+         </field>
+     </record>
+
+     <record id="product_template_action" model="ir.actions.act_window">
+        <field name="name">Product</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">product.template</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new products
+            </p>
+        </field>
+    </record>
+
+    <record id="view_couleur_tree" model="ir.ui.view">
+        <field name="name">couleur.tree</field>
+        <field name="model">couleur</field>
+        <field name="arch" type="xml">
+            <tree string="Couleur">
+                <field name="code"/>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+	 
+
+    <record id="view_couleur_form" model="ir.ui.view">
+        <field name="name">couleur.form</field>
+        <field name="model">couleur</field>
+        <field name="arch" type="xml">
+            <form string="Couleur">
+				<group col="4">
+					<field name="code"/>
+               <field name="name"/>
+				</group>
+            </form>
+        </field>
+    </record>
+	
+	<record id="view_couleur_filter" model="ir.ui.view">
+		<field name="name">couleur.list.select</field>
+		<field name="model">couleur</field>
+		<field name="priority" eval="15"/>
+		<field name="arch" type="xml">
+			<search string="Search Couleur">
+				<field name="code"/>
+            <field name="name"/>
+		   </search>
+		</field>
+	</record>
+	
+	<record id="action_couleur" model="ir.actions.act_window">
+		<field name="name">Couleur</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">couleur</field>
+		<field name="view_mode">tree,form</field>
+		<field name="search_view_id" ref="view_couleur_filter"/>
+		<field name="context">{}</field>
+		<field name="help" type="html">
+			<p class="o_view_nocontent_smiling_face">
+				Enter a new color for your product.
+			</p>
+		</field>
+	</record>
+
+    <menuitem name="Couleur"
+     id="inventory.color_menu"  parent="stock.menu_product_in_config_stock" action="action_couleur"/>
+
+    <record id="view_fabricant_tree" model="ir.ui.view">
+        <field name="name">fabricant.tree</field>
+        <field name="model">fabricant</field>
+        <field name="arch" type="xml">
+            <tree string="Fabricant">
+                <field name="name"/>
+                <field name="description"/>
+                <field name="product_id"/>
+            </tree>
+        </field>
+    </record>
+	
+    <record id="view_fabricant_form" model="ir.ui.view">
+        <field name="name">fabricant.form</field>
+        <field name="model">fabricant</field>
+        <field name="arch" type="xml">
+            <form string="Fabriant">
+				<group col="4">
+					<field name="name"/>
+					<field name="description"/>
+               <field name="product_id"/>
+				</group>
+            </form>
+        </field>
+    </record>
+	
+	<record id="view_fabricant_filter" model="ir.ui.view">
+		<field name="name">fabricant.list.select</field>
+		<field name="model">fabricant</field>
+		<field name="priority" eval="15"/>
+		<field name="arch" type="xml">
+			<search string="Search Fabricant">
+				<field name="name"/>
+            <field name="description"/>
+            <field name="product_id"/>
+		   </search>
+		</field>
+	</record>
+	
+	<record id="action_fabricant" model="ir.actions.act_window">
+		<field name="name">Fabricant</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">fabricant</field>
+		<field name="view_mode">tree,form</field>
+		<field name="search_view_id" ref="view_fabricant_filter"/>
+		<field name="context">{}</field>
+		<field name="help" type="html">
+			<p class="o_view_nocontent_smiling_face">
+				Nouveau fabricant des produits 
+			</p>
+		</field>
+	</record>
+
+    <menuitem name="Fabricant"
+     id="inventory.fabricant_menu"  parent="stock.menu_product_in_config_stock" action="action_fabricant"/>
+
+    <record id="view_distributeur_tree" model="ir.ui.view">
+        <field name="name">distributeur.tree</field>
+        <field name="model">distributeur</field>
+        <field name="arch" type="xml">
+            <tree string="Distributeur">
+                <field name="code"/>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+	
+    <record id="view_distributeur_form" model="ir.ui.view">
+        <field name="name">distributeur.form</field>
+        <field name="model">distributeur</field>
+        <field name="arch" type="xml">
+            <form string="Distrubuteur">
+				<group col="4">
+					<field name="code"/>
+               <field name="name"/>
+				</group>
+            </form>
+        </field>
+    </record>
+	
+	<record id="view_distributeur_filter" model="ir.ui.view">
+		<field name="name">distributeur.list.select</field>
+		<field name="model">distributeur</field>
+		<field name="priority" eval="15"/>
+		<field name="arch" type="xml">
+			<search string="Search Distributeur">
+				<field name="code"/>
+            <field name="name"/>
+		   </search>
+		</field>
+	</record>
+	
+	<record id="action_distributeur" model="ir.actions.act_window">
+		<field name="name">Distributeur</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">distributeur</field>
+		<field name="view_mode">tree,form</field>
+		<field name="search_view_id" ref="view_distributeur_filter"/>
+		<field name="context">{}</field>
+		<field name="help" type="html">
+			<p class="o_view_nocontent_smiling_face">
+				Nouveau Distributeur des produits
+			</p>
+		</field>
+	</record>
+
+   <menuitem name="Distributeur"
+      id="inventory.distributeur_menu"  parent="stock.menu_product_in_config_stock" action="action_distributeur"/>
+    
+
+    <record id="view_famille_tree" model="ir.ui.view">
+        <field name="name">famille.tree</field>
+        <field name="model">famille</field>
+        <field name="arch" type="xml">
+            <tree string="Famille du Produit">
+                <field name="name"/>
+                <field name="famille"/>
+                <field name="description"/>
+            </tree>
+        </field>
+    </record>
+	
+    <record id="view_famille_form" model="ir.ui.view">
+        <field name="name">famille.form</field>
+        <field name="model">famille</field>
+        <field name="arch" type="xml">
+            <form string="Famille du Produit">
+               <group col="4">
+                  <field name="name"/>
+                  <field name="famille"/>
+                  <field name="description"/>
+               </group>
+            </form>
+        </field>
+    </record>
+	
+	<record id="view_famille_filter" model="ir.ui.view">
+		<field name="name">famille.list.select</field>
+		<field name="model">famille</field>
+		<field name="priority" eval="15"/>
+		<field name="arch" type="xml">
+			<search string="Search Famille">
+				<field name="name"/>
+                <field name="famille"/>
+                <field name="description"/>
+		   </search>
+		</field>
+	</record>
+	
+	<record id="action_famille" model="ir.actions.act_window">
+		<field name="name">Famille</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">famille</field>
+		<field name="view_mode">tree,form</field>
+		<field name="search_view_id" ref="view_famille_filter"/>
+		<field name="context">{}</field>
+		<field name="help" type="html">
+			<p class="o_view_nocontent_smiling_face">
+				Nouvelle Famille 
+			</p>
+		</field>
+	</record>
+
+    <menuitem id="inventory.famille_menu"  parent="stock.menu_product_in_config_stock" action="action_famille"
+     name="Famile du Produit"/>
 
   </data>
 </odoo>

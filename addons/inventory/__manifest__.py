@@ -30,7 +30,10 @@
         'views/product.xml', 
         'reports/stock_report.xml',
         'reports/stock_template.xml',
-        'reports/stock_entrees.xml'
+        'reports/stock_entrees.xml',
+        'views/menu.xml',
+        'views/classe.xml',
+        'views/dci.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

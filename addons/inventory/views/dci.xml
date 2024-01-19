@@ -1,0 +1,103 @@
+<odoo>
+  <data>
+   
+   <record id="product_dci_form_view" model="ir.ui.view">
+        <field name="name">dci.name.form</field>
+        <field name="model">dci.name</field>
+        <field name="arch" type="xml">
+            <form class="oe_form_configuration">
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button class="oe_stat_button"
+                            name="%(inventory.product_template_action)d"
+                            icon="fa-th-list"
+                            type="action"
+                            context="{'search_default_categ_id': active_id, 'default_categ_id': active_id, 'group_expand': True}">
+                            <div class="o_field_widget o_stat_info">
+                              <!--   <span class="o_stat_value"><field name="product_count"/></span> -->
+                                <span class="o_stat_text">Nom DCI</span>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <label for="code_atc" string="Code ATC"/>
+                        <h1><field name="code_atc" placeholder="e.g. A01"/></h1>
+                    </div>
+
+                    <div class="oe_title">
+                        <label for="name" string="Nom (DCI)"/>
+                        <h1><field name="name" placeholder="e.g. Fluogel"/></h1>
+                    </div>
+                    
+                    <div class="oe_title">
+                        <label for="dosage" string="Dosage"/>
+                        <h1><field name="dosage" placeholder="e.g. 2000 mg"/></h1>
+                    </div>
+
+                    <div class="oe_title">
+                        <label for="forme" string="Forme Galénique"/>
+                        <h1><field name="forme" placeholder="e.g. Comprimés, Gélules"/></h1>
+                    </div>
+                    <div class="oe_title">
+                        <label for="product_id" string="Produits"/>
+                        <field name="product_id"/>
+                    </div>
+
+                  <!--  <group name="first" col="2">
+                        <field name="parent_id" class="oe_inline"/>
+                    </group> -->
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="product_dci_list_view" model="ir.ui.view">
+        <field name="name">dci.name.list</field>
+        <field name="model">dci.name</field>
+        <field name="priority">1</field>
+        <field name="arch" type="xml">
+            <tree string="Classe ATC">
+                
+                <field name="code_atc" string="Code ATC"/>
+                <field name="name" string="Nom (DCI)"/>
+                <field name="dosage" string="Dosage"/>
+                <field name="forme" string="Forme Galénique"/>
+                <field name="product_id" string="Produits"/>
+                
+            </tree>
+        </field>
+    </record>
+
+    <record id="product_dci_search_view" model="ir.ui.view">
+        <field name="name">dci.name.search</field>
+        <field name="model">dci.name</field>
+        <field name="arch" type="xml">
+            <search string="Classe ATC">
+                <field name="code_atc" string="Code ATC"/>
+                <field name="name" string="Nom (DCI)"/>
+                <field name="dosage" string="Dosage"/>
+                <field name="forme" string="Forme Galénique"/>
+                <field name="product_id" string="Produits"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="product_dci_action_form" model="ir.actions.act_window">
+        <field name="name">Nom DCI</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">dci.name</field>
+        <field name="search_view_id" ref="product_dci_search_view"/>
+        <field name="view_id" ref="product_dci_list_view"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new DCI name for your product
+            </p>
+        </field>
+    </record>
+    
+
+    <menuitem name="Nom (DCI)" id="inventory.dci_menu" parent="stock.menu_product_in_config_stock"
+          action="product_dci_action_form"/>
+
+  </data>
+</odoo>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="product_classe_form_view" model="ir.ui.view">
+        <field name="name">classe.atc.form</field>
+        <field name="model">classe.atc</field>
+        <field name="arch" type="xml">
+            <form class="oe_form_configuration">
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button class="oe_stat_button"
+                            name="%(inventory.product_template_action)d"
+                            icon="fa-th-list"
+                            type="action"
+                            context="{'search_default_categ_id': active_id, 'default_atc_classe': active_id, 'group_expand': True}">
+                            <div class="o_field_widget o_stat_info">
+                                <span class="o_stat_value"><field name="product_count"/></span>
+                                <span class="o_stat_text">Classe ATC</span>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <label for="name" string="Classe ATC"/>
+                        <h1><field name="name" placeholder="e.g. Lamps"/></h1>
+                    </div>
+                    <div class="oe_title">
+                        <label for="code_atc" string="Code ATC"/>
+                        <h1><field name="code_atc" placeholder="e.g. A01"/></h1>
+                    </div>
+                    <group name="first" col="2">
+                        <field name="parent_id" class="oe_inline"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="product_classe_list_view" model="ir.ui.view">
+        <field name="name">classe.atc.list</field>
+        <field name="model">classe.atc</field>
+        <field name="priority">1</field>
+        <field name="arch" type="xml">
+            <tree string="Classe ATC">
+                <field name="code_atc" string="Code ATC"/>
+                <field name="display_name" string="Classe ATC"/>
+                
+            </tree>
+        </field>
+    </record>
+
+    <record id="product_classe_search_view" model="ir.ui.view">
+        <field name="name">classe.atc.search</field>
+        <field name="model">classe.atc</field>
+        <field name="arch" type="xml">
+            <search string="Classe ATC">
+                <field name="code_atc" string="Code ATC"/>
+                <field name="name" string="Classe ATC"/>
+                
+                <field name="parent_id"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="product_classe_action_form" model="ir.actions.act_window">
+        <field name="name">Classe ATC</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">classe.atc</field>
+        <field name="search_view_id" ref="product_classe_search_view"/>
+        <field name="view_id" ref="product_classe_list_view"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new class ATC for your product
+            </p>
+        </field>
+    </record>
+
+    <menuitem name="Classe ATC" id="inventory.classe_atc_menu" parent="stock.menu_product_in_config_stock"
+          action="product_classe_action_form"/>
+
+</odoo>

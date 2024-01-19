@@ -15,7 +15,7 @@
                    <field name="region"/>
                 </xpath>
 
-                <xpath expr="//field[@name='uom_po_id']" position="after">
+              <!--<xpath expr="//field[@name='uom_po_id']" position="after">
                    <field name="num_PVR"/>
                 </xpath>
 
@@ -24,8 +24,8 @@
                 </xpath>
 
                 <xpath expr="//field[@name='uom_po_id']" position="after">
-                   <field name="num_bl"/>
-                </xpath>
+                   <field name="num_bl"/> 
+                </xpath> -->
 
                 <xpath expr="//field[@name='uom_po_id']" position="after">
                    <field name="nom_de_la_structure"/>
