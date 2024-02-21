@@ -10,9 +10,9 @@ class DciName(models.Model):
     name = fields.Char(string = 'DCI Name', index='trigram', required=True)
     product_id = fields.One2many('product.template', 'dci_id', string = 'Products')
     
-    code_atc = fields.Char(string = 'Code ATC')
+    code_atc = fields.Char(string = 'ATC Code')
     dosage = fields.Char(string = 'Dosage')
-    forme = fields.Char(string = 'Forme Galénique')
+    forme = fields.Char(string = 'Galenic Form')
 
     def _compute_product_count(self):
         read_group_res = self.env['product.template'].read_group([('categ_id', 'child_of', self.ids)], ['categ_id'], ['categ_id'])

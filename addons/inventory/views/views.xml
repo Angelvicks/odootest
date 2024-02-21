@@ -7,36 +7,82 @@
             <field name="inherit_id" ref="product.product_normal_form_view"/>
             <field name="arch" type="xml">
 
-                <xpath expr="//field[@name='uom_po_id']" position="after">
-                   <field name="aire_sante"/>
-                </xpath>
-
-                <xpath expr="//field[@name='uom_po_id']" position="after">
-                   <field name="region"/>
-                </xpath>
-
-              <!--<xpath expr="//field[@name='uom_po_id']" position="after">
-                   <field name="num_PVR"/>
-                </xpath>
-
-                <xpath expr="//field[@name='uom_po_id']" position="after">
-                   <field name="num_bc"/>
-                </xpath>
-
-                <xpath expr="//field[@name='uom_po_id']" position="after">
-                   <field name="num_bl"/> 
-                </xpath> -->
-
-                <xpath expr="//field[@name='uom_po_id']" position="after">
-                   <field name="nom_de_la_structure"/>
-                </xpath>
-
-                <xpath expr="//field[@name='uom_po_id']" position="after">
-                   <field name="nom_DCI"/>
+               <xpath expr="//field[@name='barcode']" position="after">
+                   <field name="atc_classe" string="ATC Class"/>
                 </xpath> 
 
+                <xpath expr="//field[@name='uom_po_id']" position="after">
+                   <field name="fabricant"/>
+                </xpath> 
+
+                <xpath expr="//field[@name='categ_id']" position="after">
+                   <field name="dci_id"/>
+                </xpath>
+                
+                <xpath expr="//field[@name='categ_id']" position="after">
+                   <field name="tableau"/>
+                </xpath>
+
+                <xpath expr="//field[@name='uom_po_id']" position="after">
+                   <field name="laboratoire_id"/>
+                </xpath>
+
+                <xpath expr="//field[@name='uom_po_id']" position="after">
+                   <field name="distributeur_id"/>
+                </xpath>
+
+                <xpath expr="//field[@name='uom_po_id']" position="after">
+                   <field name="gamme_id"/>
+                </xpath>
+
+                <xpath expr="//field[@name='uom_po_id']" position="after">
+                   <field name="couleur_id"/>
+                </xpath>
+
+                <xpath expr="//field[@name='categ_id']" position="after">
+                   <field name="famille_id"/>
+                </xpath>
+
+               <!-- <xpath expr="//field[@name='uom_po_id']" position="after">
+                   <field name="nom_de_la_structure"/>
+                </xpath> -->
 
             </field>
+      </record>
+
+      <record id="product_product_tree" model="ir.ui.view">
+         <field name="name">product.product.tree</field>
+         <field name="model">product.product</field>
+         <field name="inherit_id" ref="product.product_product_tree_view"/>
+         <field name="arch" type="xml">
+            <xpath expr="//tree" position="inside">
+                  <!-- Add your field here -->
+                  <field name="lot_number" optional="hide"/>
+            </xpath>
+         </field>
+      </record>
+
+      <record id="stock_lot_form" model="ir.ui.view">
+            <field name="name">stock.lot.form</field>
+            <field name="model">stock.lot</field>
+            <field name="inherit_id" ref="stock.view_production_lot_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='ref']" position="before">
+                   <field name="price"/>
+                </xpath>
+            </field>
+      </record>  
+
+      <record id="stock_lot_tree" model="ir.ui.view">
+         <field name="name">stock.lot.tree</field>
+         <field name="model">stock.lot</field>
+         <field name="inherit_id" ref="stock.view_production_lot_tree"/>
+         <field name="arch" type="xml">
+            <xpath expr="//tree" position="inside">
+                  <!-- Add your field here -->
+                  <field name="price" optional="show"/>
+            </xpath>
+         </field>
       </record>
 
   <!--  <record id="product_template_form" model="ir.ui.view">

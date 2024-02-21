@@ -1,0 +1,405 @@
+<odoo>
+    <data>
+        <!-- Parent ATC Class -->
+        <record id="atc_class" model="classe.atc">
+            <field name="name">Système digestif et métabolisme</field>
+            <field name="code_atc">A</field>
+        </record>
+        
+        <!-- Child ATC Classes -->
+        <record id="atc_class_child_1" model="classe.atc">
+            <field name="name">PREPARATIONS STOMATOLOGIQUES</field>
+            <field name="code_atc">A01</field>
+            <field name="parent_id" ref="atc_class"/>
+        </record>
+        <record id="atc_class_child_16" model="classe.atc">
+            <field name="name">PREPARATIONS STOMATOLOGIQUES</field>
+            <field name="code_atc">A01A</field>
+            <field name="parent_id" ref="atc_class_child_1"/>
+        </record>
+
+        <record id="atc_class_child_17" model="classe.atc">
+            <field name="name">MEDICAMENTS PROPHYLACTIQUES ANTICARIES</field>
+            <field name="code_atc">A01AA</field>
+            <field name="parent_id" ref="atc_class_child_16"/>
+        </record>
+        <record id="atc_class_child_18" model="classe.atc">
+            <field name="name">SODIUM FLUORURE</field>
+            <field name="code_atc">A01AA01</field>
+            <field name="parent_id" ref="atc_class_child_17"/>
+        </record>
+        <record id="atc_class_child_19" model="classe.atc">
+            <field name="name">SODIUM MONOFLUOROPHOSPHATE</field>
+            <field name="code_atc">A01AA02</field>
+            <field name="parent_id" ref="atc_class_child_17"/>
+        </record>
+        <record id="atc_class_child_20" model="classe.atc">
+            <field name="name">SODIUM FLUORURE EN ASSOCIATION</field>
+            <field name="code_atc">A01AA51</field>
+            <field name="parent_id" ref="atc_class_child_17"/>
+        </record>
+
+        <record id="atc_class_child_20" model="classe.atc">
+            <field name="name">ANTIINFECTIEUX POUR TRAITEMENT ORAL LOCAL</field>
+            <field name="code_atc">A01AB</field>
+            <field name="parent_id" ref="atc_class_child_16"/>
+        </record>
+        <record id="atc_class_child_22" model="classe.atc">
+            <field name="name">CHLORHEXIDINE</field>
+            <field name="code_atc">A01AB03</field>
+            <field name="parent_id" ref="atc_class_child_20"/>
+        </record>
+        <record id="atc_class_child_23" model="classe.atc">
+            <field name="name">MICONAZOLE</field>
+            <field name="code_atc">A01AB09</field>
+            <field name="parent_id" ref="atc_class_child_20"/>
+        </record>
+        <record id="atc_class_child_24" model="classe.atc">
+            <field name="name">DIVERS STOMATO LOCAL (ANTIINFECTIEUX OU ANTISEPTIQUES)</field>
+            <field name="code_atc">A01AB11</field>
+            <field name="parent_id" ref="atc_class_child_20"/>
+        </record>
+
+
+        <record id="atc_class_child_21" model="classe.atc">
+            <field name="name">AUTRES MEDICAMENTS POUR TRAITEMENT ORAL LOCAL</field>
+            <field name="code_atc">A01AD</field>
+            <field name="parent_id" ref="atc_class_child_16"/>
+        </record>
+        <record id="atc_class_child_25" model="classe.atc">
+            <field name="name">DIVERS STOMATO LOCAL (SAUF ANTIINFECTIEUX OU ANTISEPTIQUES)</field>
+            <field name="code_atc">A01AD11</field>
+            <field name="parent_id" ref="atc_class_child_21"/>
+        </record>
+
+
+        <record id="atc_class_child_2" model="classe.atc">
+            <field name="name">MEDICAMENTS POUR LES TROUBLES DE L'ACIDITE</field>
+            <field name="code_atc">A02</field>
+            <field name="parent_id" ref="atc_class"/>
+        </record>
+        <record id="atc_class_child_26" model="classe.atc">
+            <field name="name">ANTIACIDES</field>
+            <field name="code_atc">A02A</field>
+            <field name="parent_id" ref="atc_class_child_2"/>
+        </record>
+        <record id="atc_class_child_28" model="classe.atc">
+            <field name="name">ANTIACIDES A BASE D'ALUMINIUM</field>
+            <field name="code_atc">A02AB</field>
+            <field name="parent_id" ref="atc_class_child_26"/>
+        </record>
+        <record id="atc_class_child_31" model="classe.atc">
+            <field name="name">ALUMINIUM HYDROXYDE</field>
+            <field name="code_atc">A02AB01</field>
+            <field name="parent_id" ref="atc_class_child_28"/>
+        </record>
+        <record id="atc_class_child_32" model="classe.atc">
+            <field name="name">ALUMINIUM PHOSPHATE</field>
+            <field name="code_atc">A02AB03</field>
+            <field name="parent_id" ref="atc_class_child_28"/>
+        </record>
+
+        <record id="atc_class_child_29" model="classe.atc">
+            <field name="name">ASSOCIATIONS ET COMPLEXES A BASE D'ALUMINIUM, DE CALCIUM ET DE MAGNESIUM</field>
+            <field name="code_atc">A02AD</field>
+            <field name="parent_id" ref="atc_class_child_26"/>
+        </record>
+        <record id="atc_class_child_33" model="classe.atc">
+            <field name="name">ASSOCIATIONS DE SELS</field>
+            <field name="code_atc">A02AD01</field>
+            <field name="parent_id" ref="atc_class_child_29"/>
+        </record>
+
+        <record id="atc_class_child_30" model="classe.atc">
+            <field name="name">ANTIACIDES : AUTRES ASSOCIATIONS</field>
+            <field name="code_atc">A02AX</field>
+            <field name="parent_id" ref="atc_class_child_26"/>
+        </record>
+
+        <record id="atc_class_child_27" model="classe.atc">
+            <field name="name">MEDICAMENTS POUR L'ULCÈRE PEPTIQUE ET LE REFLUX GASTRO-OESOPHAGIEN (RGO)</field>
+            <field name="code_atc">A02B</field>
+            <field name="parent_id" ref="atc_class_child_2"/>
+        </record>
+        <record id="atc_class_child_34" model="classe.atc">
+            <field name="name">ANTAGONISTES DES RECEPTEURS H2</field>
+            <field name="code_atc">A02BA</field>
+            <field name="parent_id" ref="atc_class_child_27"/>
+        </record>
+        <record id="atc_class_child_39" model="classe.atc">
+            <field name="name">CIMETIDINE</field>
+            <field name="code_atc">A02BA01</field>
+            <field name="parent_id" ref="atc_class_child_34"/>
+        </record>
+        <record id="atc_class_child_40" model="classe.atc">
+            <field name="name">RANITIDINE</field>
+            <field name="code_atc">A02BA02</field>
+            <field name="parent_id" ref="atc_class_child_34"/>
+        </record>
+        <record id="atc_class_child_41" model="classe.atc">
+            <field name="name">FAMOTIDINE</field>
+            <field name="code_atc">A02BA03</field>
+            <field name="parent_id" ref="atc_class_child_34"/>
+        </record>
+        <record id="atc_class_child_42" model="classe.atc">
+            <field name="name">NIZATIDINE</field>
+            <field name="code_atc">A02BA04</field>
+            <field name="parent_id" ref="atc_class_child_34"/>
+        </record>
+
+        <record id="atc_class_child_35" model="classe.atc">
+            <field name="name">PROSTAGLANDINES</field>
+            <field name="code_atc">A02BB</field>
+            <field name="parent_id" ref="atc_class_child_27"/>
+        </record>
+        <record id="atc_class_child_43" model="classe.atc">
+            <field name="name">MISOPROSTOL</field>
+            <field name="code_atc">A02BB01</field>
+            <field name="parent_id" ref="atc_class_child_35"/>
+        </record>
+
+        <record id="atc_class_child_36" model="classe.atc">
+            <field name="name">INHIBITEURS DE LA POMPE A PROTONS</field>
+            <field name="code_atc">A02BC</field>
+            <field name="parent_id" ref="atc_class_child_27"/>
+        </record>
+        <record id="atc_class_child_44" model="classe.atc">
+            <field name="name">OMEPRAZOLE</field>
+            <field name="code_atc">A02BC01</field>
+            <field name="parent_id" ref="atc_class_child_36"/>
+        </record>
+        <record id="atc_class_child_45" model="classe.atc">
+            <field name="name">PANTOPRAZOLE</field>
+            <field name="code_atc">A02BC02</field>
+            <field name="parent_id" ref="atc_class_child_36"/>
+        </record>
+        <record id="atc_class_child_46" model="classe.atc">
+            <field name="name">LANSOPRAZOLE</field>
+            <field name="code_atc">A02BC03</field>
+            <field name="parent_id" ref="atc_class_child_36"/>
+        </record>
+        <record id="atc_class_child_47" model="classe.atc">
+            <field name="name">RABEPRAZOLE</field>
+            <field name="code_atc">A02BC04</field>
+            <field name="parent_id" ref="atc_class_child_36"/>
+        </record>
+        <record id="atc_class_child_48" model="classe.atc">
+            <field name="name">ESOMEPRAZOLE</field>
+            <field name="code_atc">A02BC05</field>
+            <field name="parent_id" ref="atc_class_child_36"/>
+        </record>
+
+        <record id="atc_class_child_37" model="classe.atc">
+            <field name="name">ASSOCIATIONS POUR L'ERADICATION D'HELICOBACTER PYLORI</field>
+            <field name="code_atc">A02BD</field>
+            <field name="parent_id" ref="atc_class_child_27"/>
+        </record>
+        <record id="atc_class_child_49" model="classe.atc">
+            <field name="name">BISMUTH POTASSIQUE, TETRACYCLINE ET METRONIDAZOLE</field>
+            <field name="code_atc">A02BD08</field>
+            <field name="parent_id" ref="atc_class_child_37"/>
+        </record>
+
+        <record id="atc_class_child_38" model="classe.atc">
+            <field name="name">AUTRES MEDICAMENTS POUR L'ULCÈRE PEPTIQUE ET LE REFLUX GASTROOESOPHAGIEN (RGO)</field>
+            <field name="code_atc">A02BX</field>
+            <field name="parent_id" ref="atc_class_child_27"/>
+        </record>
+        <record id="atc_class_child_50" model="classe.atc">
+            <field name="name">ALGINIQUE ACIDE EN ASSOCIATION AVEC ANTIACIDES</field>
+            <field name="code_atc">A02BX13</field>
+            <field name="parent_id" ref="atc_class_child_38"/>
+        </record>
+
+
+        <record id="atc_class_child_3" model="classe.atc">
+            <field name="name">MEDICAMENTS POUR LES TROUBLES FONCTIONNELS GASTROINTESTINAUX</field>
+            <field name="code_atc">A03</field>
+            <field name="parent_id" ref="atc_class"/>
+        </record>
+        <record id="atc_class_child_4" model="classe.atc">
+            <field name="name">ANTIEMETIQUES ET ANTINAUSEEUX</field>
+            <field name="code_atc">A04</field>
+            <field name="parent_id" ref="atc_class"/>
+        </record>
+        <record id="atc_class_child_5" model="classe.atc">
+            <field name="name">ANTIEMETIQUES ET ANTINAUSEEUX</field>
+            <field name="code_atc">A05</field>
+            <field name="parent_id" ref="atc_class"/>
+        </record>
+        <record id="atc_class_child_6" model="classe.atc">
+            <field name="name">LAXATIFS</field>
+            <field name="code_atc">A06</field>
+            <field name="parent_id" ref="atc_class"/>
+        </record>
+        <record id="atc_class_child_7" model="classe.atc">
+            <field name="name">ANTIDIARRHEIQUES, ANTIINFLAMMATOIRES ET ANTIINFECTIEUX INTESTINAUX</field>
+            <field name="code_atc">A07</field>
+            <field name="parent_id" ref="atc_class"/>
+        </record>
+        <record id="atc_class_child_8" model="classe.atc">
+            <field name="name">MEDICAMENTS DE LA DIGESTION, ENZYMES INCLUSES</field>
+            <field name="code_atc">A09</field>
+            <field name="parent_id" ref="atc_class"/>
+        </record>
+        <record id="atc_class_child_9" model="classe.atc">
+            <field name="name">MEDICAMENTS DU DIABETE</field>
+            <field name="code_atc">A10</field>
+            <field name="parent_id" ref="atc_class"/>
+        </record>
+        <record id="atc_class_child_10" model="classe.atc">
+            <field name="name">VITAMINES</field>
+            <field name="code_atc">A11</field>
+            <field name="parent_id" ref="atc_class"/>
+        </record>
+        <record id="atc_class_child_11" model="classe.atc">
+            <field name="name">SUPPLEMENTS MINERAUX</field>
+            <field name="code_atc">A12</field>
+            <field name="parent_id" ref="atc_class"/>
+        </record>
+        <record id="atc_class_child_12" model="classe.atc">
+            <field name="name">TONIQUES</field>
+            <field name="code_atc">A13</field>
+            <field name="parent_id" ref="atc_class"/>
+        </record>
+        <record id="atc_class_child_13" model="classe.atc">
+            <field name="name">ANABOLISANTS A USAGE SYSTEMIQUE</field>
+            <field name="code_atc">A14</field>
+            <field name="parent_id" ref="atc_class"/>
+        </record>
+        <record id="atc_class_child_15" model="classe.atc">
+            <field name="name">AUTRES MEDICAMENTS DES VOIES DIGESTIVES ET DU METABOLISME</field>
+            <field name="code_atc">A16</field>
+            <field name="parent_id" ref="atc_class"/>
+        </record>
+        
+
+
+
+        <record id="atc_classB" model="classe.atc">
+            <field name="name">Sang et organes hématopoiétiques</field>
+            <field name="code_atc">B</field>
+        </record>
+        <record id="atc_class_child_B" model="classe.atc">
+            <field name="name">ANTITHROMBOTIQUES</field>
+            <field name="code_atc">B01</field>
+            <field name="parent_id" ref="atc_classB"/>
+        </record>
+        <record id="atc_class_child_B5" model="classe.atc">
+            <field name="name">ANTITHROMBOTIQUES</field>
+            <field name="code_atc">B01A</field>
+            <field name="parent_id" ref="atc_class_child_B"/>
+        </record>
+        <record id="atc_class_child_B6" model="classe.atc">
+            <field name="name">ANTIVITAMINES K</field>
+            <field name="code_atc">B01AA</field>
+            <field name="parent_id" ref="atc_class_child_B5"/>
+        </record>
+        <record id="atc_class_child_B7" model="classe.atc">
+            <field name="name">GROUPE DE L'HEPARINE</field>
+            <field name="code_atc">B01AB</field>
+            <field name="parent_id" ref="atc_class_child_B5"/>
+        </record>
+        <record id="atc_class_child_B8" model="classe.atc">
+            <field name="name">INHIBITEURS DE L'AGREGATION PLAQUETTAIRE, HEPARINE EXCLUE</field>
+            <field name="code_atc">B01AC</field>
+            <field name="parent_id" ref="atc_class_child_B5"/>
+        </record>
+        <record id="atc_class_child_B9" model="classe.atc">
+            <field name="name">INHIBITEURS DIRECTS DE LA THROMBINE</field>
+            <field name="code_atc">B01AE</field>
+            <field name="parent_id" ref="atc_class_child_B5"/>
+        </record>
+        <record id="atc_class_child_B10" model="classe.atc">
+            <field name="name">INHIBITEURES DIRECTS DU FACTEUR Xa</field>
+            <field name="code_atc">B01AF</field>
+            <field name="parent_id" ref="atc_class_child_B5"/>
+        </record>
+        <record id="atc_class_child_B11" model="classe.atc">
+            <field name="name">AUTRES ANTITHROMBOTIQUES</field>
+            <field name="code_atc">B01AX</field>
+            <field name="parent_id" ref="atc_class_child_B5"/>
+        </record>
+
+        <record id="atc_class_child_B1" model="classe.atc">
+            <field name="name">ANTIHEMMORRAGIQUES</field>
+            <field name="code_atc">B02</field>
+            <field name="parent_id" ref="atc_classB"/>
+        </record>
+        <record id="atc_class_child_B2" model="classe.atc">
+            <field name="name">PREPARATIONS ANTIANEMIQUES</field>
+            <field name="code_atc">B03</field>
+            <field name="parent_id" ref="atc_classB"/>
+        </record>
+        <record id="atc_class_child_B3" model="classe.atc">
+            <field name="name">SUBSTITUTS DU SANG ET SOLUTIONS DE PERFUSION</field>
+            <field name="code_atc">B05</field>
+            <field name="parent_id" ref="atc_classB"/>
+        </record>
+        <record id="atc_class_child_B4" model="classe.atc">
+            <field name="name">AUTRES MEDICAMENTS UTILISES EN HEMATOLOGIE</field>
+            <field name="code_atc">B06</field>
+            <field name="parent_id" ref="atc_classB"/>
+        </record>
+
+        
+        <record id="atc_classC" model="classe.atc">
+            <field name="name">Système cardio-vasculaire</field>
+            <field name="code_atc">C</field>
+        </record>
+        <record id="atc_classD" model="classe.atc">
+            <field name="name">Dermatologie</field>
+            <field name="code_atc">D</field>
+        </record>
+        <record id="atc_classG" model="classe.atc">
+            <field name="name">Système génito-urinaire et hormones sexuelles</field>
+            <field name="code_atc">G</field>
+        </record>
+        <record id="atc_classH" model="classe.atc">
+            <field name="name">Hormones systémiques, à l'exclusion des hormones sexuelles et des insulines</field>
+            <field name="code_atc">H</field>
+        </record>
+        <record id="atc_classJ" model="classe.atc">
+            <field name="name">Anti-infectieux (usage systémique)</field>
+            <field name="code_atc">J</field>
+        </record>
+        <record id="atc_classL" model="classe.atc">
+            <field name="name">Antinéoplasiques et agents immunomodulants</field>
+            <field name="code_atc">L</field>
+        </record>
+        <record id="atc_classM" model="classe.atc">
+            <field name="name">Système musculo-squelettique</field>
+            <field name="code_atc">M</field>
+        </record>
+        <record id="atc_classN" model="classe.atc">
+            <field name="name">Système nerveux</field>
+            <field name="code_atc">N</field>
+        </record>
+        <record id="atc_classP" model="classe.atc">
+            <field name="name">Antiparasitaires, insecticides et répulsifs</field>
+            <field name="code_atc">P</field>
+        </record>
+        <record id="atc_classR" model="classe.atc">
+            <field name="name">Système respiratoire</field>
+            <field name="code_atc">R</field>
+        </record>
+        <record id="atc_classS" model="classe.atc">
+            <field name="name">Organes sensoriels</field>
+            <field name="code_atc">S</field>
+        </record>
+        <record id="atc_classV" model="classe.atc">
+            <field name="name">Divers</field>
+            <field name="code_atc">V</field>
+        </record>
+        <record id="atc_classW" model="classe.atc">
+            <field name="name">Homéopathie</field>
+            <field name="code_atc">W</field>
+        </record>
+        <record id="atc_classX" model="classe.atc">
+            <field name="name">Non déterminé</field>
+            <field name="code_atc">X</field>
+        </record>
+
+        <!-- Add more ATC classes as needed -->
+    </data>
+</odoo>

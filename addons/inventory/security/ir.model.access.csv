@@ -1,2 +1,9 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_inventory_inventory,inventory.inventory,model_inventory_inventory,base.group_user,1,1,1,1
+access_classe_atc,inventory.classe.atc,model_classe_atc,,1,1,1,1
+access_dci,inventory.dci.name,model_dci_name,,1,1,1,1
+access_fabricant,inventory.fabricant,model_fabricant,,1,1,1,1
+access_laboratoire,inventory.laboratoire,model_laboratoire,,1,1,1,1
+access_gamme,inventory.gamme,model_gamme,,1,1,1,1
+access_couleur,inventory.couleur,model_couleur,,1,1,1,1
+access_distributeur,inventory.distributeur,model_distributeur,,1,1,1,1
+access_famille,inventory.famille,model_famille,,1,1,1,1

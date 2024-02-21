@@ -7,7 +7,7 @@ from odoo.exceptions import UserError, ValidationError
 
 class ClasseATC(models.Model):
     _name = "classe.atc"
-    _description = "Classe ATC"
+    _description = "ATC Class"
     _parent_name = "parent_id"
     _parent_store = True
     _rec_name = 'complete_name'
@@ -17,8 +17,8 @@ class ClasseATC(models.Model):
     complete_name = fields.Char(
         'Complete Name', compute='_compute_complete_name', recursive=True,
         store=True)
-    code_atc = fields.Char( string = 'Code ATC', index=True, required=True)
-    parent_id = fields.Many2one('classe.atc', 'Parent Classe ATC', index=True, ondelete='cascade')
+    code_atc = fields.Char( string = 'ATC Code', index=True, required=True)
+    parent_id = fields.Many2one('classe.atc', 'Parent ATC Class', index=True, ondelete='cascade')
     parent_path = fields.Char(index=True, unaccent=False)
     child_id = fields.One2many('classe.atc', 'parent_id', 'Child Classes')
     product_count = fields.Integer(

@@ -1,0 +1,72 @@
+<odoo>
+    <data noupdate="1">
+        <!-- Familly of Products -->
+        <record id="pdt_fmly" model="famille">
+            <field name="name">MSO</field>
+            <field name="famille">Oral Dry Medicine Tablet</field>
+            <field name="description">Tablets, capsules</field>
+        </record>
+        <record id="pdt_fmly1" model="famille">
+            <field name="name">MSP</field>
+            <field name="famille">Medicine in Syrup</field>
+            <field name="description">Drinkable Ampoule</field>
+        </record>
+        <record id="pdt_fmly2" model="famille">
+            <field name="name">MUE</field>
+            <field name="famille">External Use Medication</field>
+            <field name="description">Dermatological and gynaecological preparations, including local contraceptives, ENT products</field>
+        </record>
+        <record id="pdt_fmly3" model="famille">
+            <field name="name">MIJ</field>
+            <field name="famille">Injectable Medication</field>
+            <field name="description">Ampoule injectable, Solutés de perfusion</field>
+        </record>
+        <record id="pdt_fmly4" model="famille">
+            <field name="name">PCF</field>
+            <field name="famille">Contraceptive Product</field>
+            <field name="description">Implants, Jadelle, (except local contraceptives)...</field>
+        </record>
+        <record id="pdt_fmly5" model="famille">
+            <field name="name">DIM</field>
+            <field name="famille">Medical Devices</field>
+            <field name="description">Bandages, Injection equipment (needles, syringes, catheters, infusion sets, of transfusion...), gloves, ...</field>
+        </record>
+        <record id="pdt_fmly0" model="famille">
+            <field name="name">MLA</field>
+            <field name="famille">Laboratory Equipments</field>
+            <field name="description">Reagents, diagnostic tests, radiology and scanner equipment </field>
+        </record>
+        <record id="pdt_fmly6" model="famille">
+            <field name="name">EQM</field>
+            <field name="famille">Medical Equipments</field>
+            <field name="description">Analyzer, counter, pipetting devices, ...</field>
+        </record>
+        <record id="pdt_fmly7" model="famille">
+            <field name="name">DES</field>
+            <field name="famille">Disinfectants</field>
+            <field name="description">Disinfectants and Detergents</field>
+        </record>
+        <record id="pdt_fmly8" model="famille">
+            <field name="name">VAC</field>
+            <field name="famille">Vaccins</field>
+            <field name="description">Vaccines, immunoglobulins, serotherapy</field>
+        </record>
+        <record id="pdt_fmly9" model="famille">
+            <field name="name">KIT</field>
+            <field name="famille">KITS</field>
+            <field name="description">Medical kits, delivery</field>
+        </record>
+        <record id="pdt_fmly05" model="famille">
+            <field name="name">OGE</field>
+            <field name="famille">Management Tools</field>
+            <field name="description"> </field>
+        </record>
+        <record id="pdt_fmly15" model="famille">
+            <field name="name">REA</field>
+            <field name="famille">Reagents</field>
+            <field name="description"> </field>
+        </record>
+
+
+    </data>
+</odoo>

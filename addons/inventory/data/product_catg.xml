@@ -1,0 +1,60 @@
+<odoo>
+    <data noupdate="1">
+        <!-- Parent Categories -->
+        <record id="product_category_parent_1" model="product.category">
+            <field name="name">Drugs</field>
+        </record>
+        <record id="product_category_parent_2" model="product.category">
+            <field name="name">Medical Equipments</field>
+        </record>
+        <record id="product_category_parent_3" model="product.category">
+            <field name="name">Disinfectants</field>
+        </record>
+
+        <!-- Child Categories for Parent 1 -->
+        <record id="product_category_child_1" model="product.category">
+            <field name="name">Antibiotics</field>
+            <field name="parent_id" ref="inventory.product_category_parent_1"/>
+        </record>
+        <record id="product_category_child_2" model="product.category">
+            <field name="name">Anti-cancer</field>
+            <field name="parent_id" ref="inventory.product_category_parent_1"/>
+        </record>
+        <record id="product_category_child_3" model="product.category">
+            <field name="name">External Use</field>
+            <field name="parent_id" ref="inventory.product_category_parent_1"/>
+        </record>
+        <record id="product_category_child_4" model="product.category">
+            <field name="name">Anti-hypertensive</field>
+            <field name="parent_id" ref="inventory.product_category_parent_1"/>
+        </record>
+        <record id="product_category_child_5" model="product.category">
+            <field name="name">Anti-malaria</field>
+            <field name="parent_id" ref="inventory.product_category_parent_1"/>
+        </record>
+        <record id="product_category_child_6" model="product.category">
+            <field name="name">Injectables</field>
+            <field name="parent_id" ref="inventory.product_category_parent_1"/>
+        </record>
+        <record id="product_category_child_7" model="product.category">
+            <field name="name">Orals</field>
+            <field name="parent_id" ref="inventory.product_category_parent_1"/>
+        </record>
+
+        <!-- Child Categories for Parent 2 -->
+        <record id="product_category_child_8" model="product.category">
+            <field name="name">Infusion Solutions</field>
+            <field name="parent_id" ref="inventory.product_category_parent_2"/>
+        </record>
+        <record id="product_category_child_9" model="product.category">
+            <field name="name">Syringes</field>
+            <field name="parent_id" ref="inventory.product_category_parent_2"/>
+        </record>
+
+        <!-- Child Category for Parent 3 -->
+        <record id="product_category_child" model="product.category">
+            <field name="name">Mask</field>
+            <field name="parent_id" ref="inventory.product_category_parent_3"/>
+        </record>
+    </data>
+</odoo>

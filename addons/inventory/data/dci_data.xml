@@ -1,0 +1,157 @@
+<odoo>
+    <data noupdate="1">
+        <!-- DCI Names -->
+        <record id="dci_name" model="dci.name">
+            <field name="code_atc">N02BE01</field>
+            <field name="name">Acetaminophen</field>
+            <field name="dosage">500mg</field>
+            <field name="forme">Tablet</field>
+        </record>
+        <record id="dci_name1" model="dci.name">
+            <field name="code_atc">M01AE01</field>
+            <field name="name">Ibuprofen</field>
+            <field name="dosage">200mg</field>
+            <field name="forme">Capsule</field>
+        </record>
+        <record id="dci_name2" model="dci.name">
+            <field name="code_atc">A01AA01</field>
+            <field name="name">FLUOREX</field>
+            <field name="dosage">1 mg/1 ml</field>
+            <field name="forme">Solution buvable en flacon</field>
+        </record>
+        <record id="dci_name3" model="dci.name">
+            <field name="code_atc">A01AA01</field>
+            <field name="name">ZYMAFLUOR</field>
+            <field name="dosage">0,50 mg</field>
+            <field name="forme">Comprimé</field>
+        </record>
+        <record id="dci_name4" model="dci.name">
+            <field name="code_atc">A01AA02</field>
+            <field name="name">FLUOGEL</field>
+            <field name="dosage">2000 mg</field>
+            <field name="forme">Gel dentaire</field>
+        </record>
+
+        <record id="dci_name5" model="dci.name">
+            <field name="code_atc">A01AA51</field>
+            <field name="name">FLUOSTEROL</field>
+            <field name="dosage">0,25 mg/800 U.I./dose</field>
+            <field name="forme">Solution buvable</field>
+        </record>
+        <record id="dci_name6" model="dci.name">
+            <field name="code_atc">A01AA51</field>
+            <field name="name">ZYMADUO</field>
+            <field name="dosage">300 UI</field>
+            <field name="forme">Solution buvable en gouttes</field>
+        </record>
+        <record id="dci_name7" model="dci.name">
+            <field name="code_atc">A01AA51</field>
+            <field name="name">ZYMADUO</field>
+            <field name="dosage">150 UI</field>
+            <field name="forme">Solution buvable en gouttes</field>
+        </record>
+
+        <record id="dci_name8" model="dci.name">
+            <field name="code_atc">A01AB03</field>
+            <field name="name">CHLORHEXIDINE ARROW</field>
+            <field name="dosage">0,12 %</field>
+            <field name="forme">Solution pour bain de bouche</field>
+        </record>
+        <record id="dci_name9" model="dci.name">
+            <field name="code_atc">A01AB03</field>
+            <field name="name">CHLORHEXIDINE BIOGARAN</field>
+            <field name="dosage">0,12 %</field>
+            <field name="forme">Solution pour bain de bouche</field>
+        </record>
+        <record id="dci_name10" model="dci.name">
+            <field name="code_atc">A01AB03</field>
+            <field name="name">CHLORHEXIDINE VIATRIS</field>
+            <field name="dosage">0,12 %</field>
+            <field name="forme">Solution pour bain de bouche</field>
+        </record>
+        <record id="dci_name11" model="dci.name">
+            <field name="code_atc">A01AB03</field>
+            <field name="name">ELUDRILPERIO</field>
+            <field name="dosage">0,20 %</field>
+            <field name="forme">Solution pour bain de bouche</field>
+        </record>
+        <record id="dci_name12" model="dci.name">
+            <field name="code_atc">A01AB03</field>
+            <field name="name">PAROEX</field>
+            <field name="dosage">0,12 %</field>
+            <field name="forme">Solution pour bain de bouche</field>
+        </record>
+
+        <record id="dci_name13" model="dci.name">
+            <field name="code_atc">A01AB09</field>
+            <field name="name">DAKTARIN</field>
+            <field name="dosage">2 %</field>
+            <field name="forme">Gel buccal</field>
+        </record>
+        <record id="dci_name14" model="dci.name">
+            <field name="code_atc">A01AB09</field>
+            <field name="name">LORAMYC</field>
+            <field name="dosage">50 mg</field>
+            <field name="forme">Comprimé buccogingival muco-adhésif</field>
+        </record>
+
+        <record id="dci_name15" model="dci.name">
+            <field name="code_atc">A01AB11</field>
+            <field name="name">CHLORHEXIDINE/CHLOROBUTANOL ARROW </field>
+            <field name="dosage">0,5 ml/0,5 g pour 100 ml</field>
+            <field name="forme">Solution pour bain de bouche en flacon</field>
+        </record>
+        <record id="dci_name16" model="dci.name">
+            <field name="code_atc">A01AB11</field>
+            <field name="name">CHLORHEXIDINE/CHLOROBUTANOL BIOGARAN </field>
+            <field name="dosage">0,5 ml/0,5 g pour 100 ml</field>
+            <field name="forme">Solution pour bain de bouche en flacon</field>
+        </record>
+        <record id="dci_name17" model="dci.name">
+            <field name="code_atc">A01AB11</field>
+            <field name="name">CHLORHEXIDINE/CHLOROBUTANOL EG</field>
+            <field name="dosage">0,5 ml/0,5 g pour 100 ml</field>
+            <field name="forme">Solution pour bain de bouche en flacon</field>
+        </record>
+        <record id="dci_name18" model="dci.name">
+            <field name="code_atc">A01AB11</field>
+            <field name="name">CHLORHEXIDINE/CHLOROBUTANOL TEVA</field>
+            <field name="dosage">0,5 ml/0,5 g pour 100 ml</field>
+            <field name="forme">Solution pour bain de bouche en flacon</field>
+        </record>
+        <record id="dci_name19" model="dci.name">
+            <field name="code_atc">A01AB11</field>
+            <field name="name">CHLORHEXIDINE/CHLOROBUTANOL VIATRIS</field>
+            <field name="dosage">0,5 ml/0,5 g pour 100 ml</field>
+            <field name="forme">Solution pour bain de bouche en flacon</field>
+        </record>
+        <record id="dci_name20" model="dci.name">
+            <field name="code_atc">A01AB11</field>
+            <field name="name">CHLORHEXIDINE/CHLOROBUTANOL ZENTIVA</field>
+            <field name="dosage">0,5 ml/0,5 g pour 100 ml</field>
+            <field name="forme">Solution pour bain de bouche en flacon</field>
+        </record>
+        <record id="dci_name21" model="dci.name">
+            <field name="code_atc">A01AB11</field>
+            <field name="name">CHLORHEXIDINE/CHLOROBUTANOL SANDOZ</field>
+            <field name="dosage">0,5 ml/0,5 g pour 100 ml</field>
+            <field name="forme">Solution pour bain de bouche en flacon</field>
+        </record>
+        <record id="dci_name22" model="dci.name">
+            <field name="code_atc">A01AB11</field>
+            <field name="name">ELUDRIL</field>
+            <field name="dosage">0,5 ml/0,5 g pour 100 ml</field>
+            <field name="forme">Solution pour bain de bouche en flacon</field>
+        </record>
+
+        <record id="dci_name23" model="dci.name">
+            <field name="code_atc">A01AD11</field>
+            <field name="name">ARTISIAL</field>
+            <field name="dosage"> </field>
+            <field name="forme"> Solution pour pulvérisation endo-buccale</field>
+        </record>
+
+
+        <!-- Add more records as needed -->
+    </data>
+</odoo>

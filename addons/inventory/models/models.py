@@ -8,27 +8,43 @@ class inventory(models.Model):
 
    _inherit = 'product.product'
 
-   date_de_reception = fields.Date(String="Date de recepetion" , required = True)
-   numero_de_lot = fields.Char(String="Numéro de Lot" , required = True)
-   conditionement = fields.Char(String = "Conditionement", required=True)
-   dosage = fields.Char(String = "Dosage", required=True)
-   fournisseur = fields.Char(String = "fournisseur", required=True)
+   default_code = fields.Char(string = 'CIP Code')
+   nom_de_la_structure = fields.Char(string='Name of the Structure')
+   fabricant = fields.One2many('fabricant', 'product_id', string = 'Manufacturer')
+    
+   atc_classe = fields.Many2one('classe.atc', 'ATC Class', group_expand='_read_group_atc_classe')
+    
+   dci_id = fields.Many2one('dci.name', string = 'DCI Name')
+    
+   laboratoire_id = fields.Many2one('laboratoire', string="Laboratory",required=False)
+    
+   tableau = fields.Selection(selection=[('0', '0'),('1', '1'),('2', '2'),('3', '3'), ('4', '4'), ('5', '5')],string="Table")
+   distributeur_id = fields.Many2one('distributeur', string="Distributor")
+   gamme_id = fields.Many2one('gamme', string="Gamme")
+   couleur_id = fields.Many2one('couleur', string="Color")
+   famille_id = fields.Many2one('famille', string="Product family")
 
-   aire_sante = fields.Char(string='Aire de santé')
-   region = fields.Char(string='Région')
-   district_sante = fields.Char(string='District de santé')
    
-   num_PVR = fields.Integer(string='N°PVR')
-   num_bc = fields.Char(string='N°BC')
-   num_bl = fields.Char(string='N°BL')
-   nom_de_la_structure = fields.Char(string='Nom de la Structure')
-   nom_DCI = fields.Char(string='Nom (DCI)')
 
-   classe_atc = fields.Char(string = 'Classe ATC')
-   code_cip = fields.Integer(string = 'Code CIP')
-   fabricant = fields.Char(string = 'Fabricant')
+   stock_ids = fields.One2many('stock.lot', 'product_id', string='Stock Lots')
+   purchase_order_ids = fields.Many2many(
+        comodel_name='purchase.order',
+        relation='product_purchase_order_rel',  # Name of the relationship table
+        column1='product_id',
+        column2='purchase_order_id',
+        string='Purchase Orders'
+    )
+   
+   stock_picking = fields.One2many('stock.picking', 'product_id', string = 'Stock Picking')
 
-   code_gio = fields.Integer(string = 'Code GIO')
+class stock(models.Model):
+    _inherit = 'stock.lot'
+
+    #ref = fields.Char(string = 'CIP Code')
+    price = fields.Char(string = 'Cost Price')
+
+    product_lot = fields.Many2one('product.template', string='Product Template')
+   
 
   # _name = 'inventory.inventory'
   # _description = 'inventory.inventory'

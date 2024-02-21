@@ -15,16 +15,16 @@
                             context="{'search_default_categ_id': active_id, 'default_atc_classe': active_id, 'group_expand': True}">
                             <div class="o_field_widget o_stat_info">
                                 <span class="o_stat_value"><field name="product_count"/></span>
-                                <span class="o_stat_text">Classe ATC</span>
+                                <span class="o_stat_text">ATC Class</span>
                             </div>
                         </button>
                     </div>
                     <div class="oe_title">
-                        <label for="name" string="Classe ATC"/>
+                        <label for="name" string="ATC Class"/>
                         <h1><field name="name" placeholder="e.g. Lamps"/></h1>
                     </div>
                     <div class="oe_title">
-                        <label for="code_atc" string="Code ATC"/>
+                        <label for="code_atc" string="ATC Code"/>
                         <h1><field name="code_atc" placeholder="e.g. A01"/></h1>
                     </div>
                     <group name="first" col="2">
@@ -40,9 +40,9 @@
         <field name="model">classe.atc</field>
         <field name="priority">1</field>
         <field name="arch" type="xml">
-            <tree string="Classe ATC">
-                <field name="code_atc" string="Code ATC"/>
-                <field name="display_name" string="Classe ATC"/>
+            <tree string="ATC Class">
+                <field name="code_atc" string="ATC Code"/>
+                <field name="display_name" string="ATC Class"/>
                 
             </tree>
         </field>
@@ -52,9 +52,9 @@
         <field name="name">classe.atc.search</field>
         <field name="model">classe.atc</field>
         <field name="arch" type="xml">
-            <search string="Classe ATC">
-                <field name="code_atc" string="Code ATC"/>
-                <field name="name" string="Classe ATC"/>
+            <search string="ATC Class">
+                <field name="code_atc" string="ATC Code"/>
+                <field name="name" string="ATC Class"/>
                 
                 <field name="parent_id"/>
             </search>
@@ -62,7 +62,7 @@
     </record>
 
     <record id="product_classe_action_form" model="ir.actions.act_window">
-        <field name="name">Classe ATC</field>
+        <field name="name">ATC Class</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">classe.atc</field>
         <field name="search_view_id" ref="product_classe_search_view"/>
@@ -74,7 +74,7 @@
         </field>
     </record>
 
-    <menuitem name="Classe ATC" id="inventory.classe_atc_menu" parent="stock.menu_product_in_config_stock"
+    <menuitem name="ATC Class" id="inventory.classe_atc_menu" parent="stock.menu_product_in_config_stock"
           action="product_classe_action_form"/>
 
 </odoo>

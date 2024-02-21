@@ -7,48 +7,68 @@
                     <div class="page">
                         <div class="oe_structure"/>
                            <div> 
-                           <h1 style="text-align:center;">Rapport de Réception des Produits</h1><br/>
+                           <h1 style="text-align:center; font-weight: bold;">Product Acceptance Report</h1><br/>
                             <div class="row p-3 text-center">
 
                                 <div class="col-3">
-                                    <p><span >Region : </span> <span t-field="doc.region"/> </p>
-                                    <p> <span> District de santé : </span>
-                                    <span t-field="doc.district_sante"></span></p>
+                                    <p><span style="font-weight: bold;">Region : </span>
+                                       <span > Littoral </span>
+                                    <!--  <span t-field="doc.region"/> -->
+                                    </p>
+
+                                    <p> <span style="font-weight: bold;"> Health District : </span>
+                                        <span> Akwa </span>
+                                   <!-- <span t-field="doc.district_sante"></span> -->
+                                    </p>
                                 </div>
 
                                 <div class="col-3">
                                   <p>
-                                    <span>Aire de Santé : </span>
-                                    <span t-field="doc.aire_sante"/> </p>
+                                    <span style="font-weight: bold;">Health Area : </span>
+                                    <span > Douala </span>
+                                  <!--  <span t-field="doc.aire_sante"/> -->
+
+                                  </p>
                                   
                                   <p>
-                                    <span>Nom de la Structure : </span>
-                                    <span t-field="doc.nom_de_la_structure" />  
+                                    <span style="font-weight: bold;">Name of the Structure : </span>
+                                    <span t-field="doc.company_id" > </span> 
+                                   <!-- <span t-field="doc.nom_de_la_structure" /> -->
                                   </p>
 
 
                                 </div>
 
                                 <div class="col-6">
-                                    <p class="text-center"> <span>Fournisseur : </span>
-                                    <span t-field="doc.partner_id"></span> </p>
+                                    <p class="text-center"> <span style="font-weight: bold;">Supplier : </span>
+                                    <span t-field="doc.partner_ids"></span> </p>
 
                                     <div class="row">
                                         <div class="col-6">
-                                           <p> <span> Date livraison :</span>
-                                            <span t-field="doc.expiration_time"> Jours </span> </p>
+                                           <p> <span style="font-weight: bold;"> Delivery Dates :</span>
+                                            <span t-field="doc.stock_dates"> </span> Days </p>
                                             
-                                            <p> N° BL <span t-field="doc.num_bl"/> </p>
-                                          <!--    -->
+                                            <p> <span style="font-weight: bold;"> N° BL : </span> 
+                                              <!--  <span> P0005 </span> -->
+                                              <span t-field="doc.stock_names"/> 
+                                            </p>
+                                              
 
                                         </div>
                                         <div class="col-6">
-                                            <span>N° PVR: 
-                                              <span t-field="doc.num_PVR"/>
+                                            <span style="font-weight: bold;">N° PVR: 
+                                            <span style="border-bottom: 1px solid black; height: 20px; width: 100px;"> </span>
+                                             <!-- <span t-field="doc.num_PVR"/> -->
                                             </span>
 
-                                            <p>N°BC :  <span t-field="doc.num_bc"/> </p>
-                                        
+                                            <p> <span style="font-weight: bold;">N°BC : </span>
+                                            <span t-field="doc.stock_origin"/>
+                                            <!--  <span t-field="doc.num_bc"/> -->
+                                            <!--  <t t-if="doc.purchase_order_name">
+                                                <span t-field="doc.purchase_order_name"/> 
+                                              </t>   -->
+                                            </p>
+                                              
                                         </div>
 
                                         
@@ -58,59 +78,59 @@
                                 </div>
                                 
                             </div>
-                              <table class="table">
+                              <table class="table" style="width: 100%;" >
                                 <thead>
                                    <tr>
                                         <th name="th_numero" class="text-start">
-                                            <span>N° d'ordre</span>
+                                            <span>Order no.</span>
                                         </th>
                                         <th name="th_nom" class="text-start">
-                                            <span>Nom (DCI) </span>
+                                            <span>Name (DCI) </span>
                                         </th>
                                         <th name="th_dosage" class="text-start">
                                             <span>Dosage</span>
                                         </th>
                                         <th name="th_forme" class="text-start">
-                                            <span>Forme Galénique</span>
+                                            <span>Galenic Form</span>
                                         </th>
                                         <th name="th_conditionement" class="text-start">
-                                            <span>Conditionement</span>
+                                            <span>Packaging</span>
                                         </th>
                                         <th name="th_quantité" class="text-start">
-                                            <span>Quantité (Bon de Livraison)</span>
+                                            <span>Quantity (Delivery Slip)</span>
                                         </th>
                                         <th name="th_qtitéRe" class="text-start">
-                                            <span>Quantité Reçue</span>
+                                            <span>Quantity Received</span>
                                         </th>
                                         <th name="th_numérodelot" class="text-start">
-                                            <span>Numéro de Lot</span>
+                                            <span>Lot Numbers</span>
                                         </th>
                                         <th name="th_date" class="text-start">
-                                            <span>Date de Péremption</span>
+                                            <span>Expiration Date</span>
                                         </th>
                                         <th name="th_fabricant" class="text-start">
-                                            <span>Fabricant</span>
+                                            <span>Manufacturer</span>
                                         </th>
                                          <th name="th_écart" class="text-start">
-                                            <span>Ecart</span>
+                                            <span>Difference</span>
                                         </th>
                                         <th name="th_qtitéRej" class="text-start">
-                                            <span>Quantité Rejetée</span>
+                                            <span>Rejected Quantity</span>
                                         </th>
                                          <th name="th_qtitéAcc" class="text-start">
-                                            <span>Quantité Acceptée</span>
+                                            <span>Accepted Quantity</span>
                                         </th>
                                          <th name="th_observations" class="text-start">
-                                            <span>Oberservation</span>
+                                            <span>Observations</span>
                                         </th>
                             
                                     </tr>
                                 </thead>
 
-                              <!--  <tbody>
-                                 <t t-foreach="doc.product_fournisseur_ids" t-as="doc"> -->
+                              <!--  <tbody> -->
+                                 <t t-foreach="docs" t-as="doc"> 
                                   <tr>
-                                        <td>
+                                        <td style="width: 10%;" >
                                             <span t-field="doc.id"/>
                                         </td>
                                         <td>
@@ -126,36 +146,40 @@
                                             <span t-field="doc.packaging_names"/>
                                         </td>
                                         <td>
-                                            <span t-field="doc.lot_id"/>
+                                            <span t-field="doc.quantity"/>
                                         </td>
                                         <td>
-                                            <span t-field="doc.name"/>
+                                            <span t-field="doc.done"/>
                                         </td>
                                         <td>
-                                            <span t-field="doc.lot_id"/>
+                                            <span t-field="doc.lot_names"/>
                                         </td>
                                         <td>
-                                            <span t-field="doc.expiration_date"/>
+                                            <span t-field="doc.expiration_dates"/>
                                         </td>
                                         <td>
                                             <span t-field="doc.fabricant.name"/>
                                         </td>
                                         <td>
-                                            <span t-field="doc.inventory_diff"/>
+                                            <span t-field="doc.all_inventory_diffs"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="doc.total_qty_received"/>
+                                            <span t-field="doc.available_qties"/>
                                         </td>
                                         <td>
                                             <span t-field="doc.all_quantities"/>
                                         </td>
                                         <td>
-                                            <span t-field="doc.all_inventory_diffs"/>
-                                        </td>
-                                        <td>
-                                            <span t-field="doc.detailed_type"/>
+                                            <span t-field="doc.name"/>
+                                            <div style="border-bottom: 1px solid black; height: 20px; width: 100px;">
+                                                <!-- This is an empty placeholder for manual input after printing -->
+                                            </div>
                                         </td>
 
                                     </tr>
-                                <!-- </t> 
-                                </tbody> -->
+                                 </t> 
+                               <!-- </tbody> -->
 
                               </table>
 

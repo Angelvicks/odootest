@@ -6,68 +6,40 @@
             <field name="model">product.template</field>
             <field name="inherit_id" ref="product.product_template_only_form_view"/>
             <field name="arch" type="xml">
-
-                <xpath expr="//field[@name='uom_po_id']" position="after">
-                   <field name="aire_sante"/>
-                </xpath> 
-
-                <xpath expr="//field[@name='uom_po_id']" position="after">
-                   <field name="region"/>
-                </xpath>
-
-               <!-- <xpath expr="//field[@name='uom_po_id']" position="after">
-                   <field name="num_PVR"/>
+    
+               <!-- <xpath expr="//field[@name='product_tag_ids']" position="after">
+                   <field name="nom_de_la_structure"/>
                 </xpath> -->
 
-                <xpath expr="//field[@name='product_tag_ids']" position="after">
-                   <field name="nom_de_la_structure"/>
-                </xpath>
-
-                <xpath expr="//field[@name='uom_po_id']" position="after">
-                   <field name="district_sante"/>
-                </xpath>
-
-                <xpath expr="//field[@name='product_tag_ids']" position="after">
-                   <field name="atc_classe" string="Classe ATC"/>
+                <xpath expr="//field[@name='barcode']" position="after">
+                   <field name="atc_classe" string="ATC Class"/>
                 </xpath> 
 
-                <xpath expr="//field[@name='product_tag_ids']" position="after">
-                   <field name="code_cip"/>
-                </xpath>
-
-                <xpath expr="//field[@name='aire_sante']" position="after">
+                <xpath expr="//field[@name='uom_po_id']" position="after">
                    <field name="fabricant"/>
                 </xpath> 
 
-                <xpath expr="//field[@name='nom_de_la_structure']" position="after">
+                <xpath expr="//field[@name='product_tag_ids']" position="after">
                    <field name="dci_id"/>
                 </xpath>
-
-                <xpath expr="//field[@name='dci_id']" position="after">
-                   <field name="famille"/>
-                </xpath>
-
-                <xpath expr="//field[@name='nom_de_la_structure']" position="after">
+                
+                <xpath expr="//field[@name='product_tag_ids']" position="after">
                    <field name="tableau"/>
                 </xpath>
 
-                <xpath expr="//field[@name='famille']" position="after">
+                <xpath expr="//field[@name='uom_po_id']" position="after">
                    <field name="laboratoire_id"/>
                 </xpath>
 
-                <xpath expr="//field[@name='region']" position="after">
-                   <field name="contingente"/>
-                </xpath>
-
-                <xpath expr="//field[@name='nom_de_la_structure']" position="after">
+                <xpath expr="//field[@name='uom_po_id']" position="after">
                    <field name="distributeur_id"/>
                 </xpath>
 
-                <xpath expr="//field[@name='fabricant']" position="after">
+                <xpath expr="//field[@name='tableau']" position="after">
                    <field name="gamme_id"/>
                 </xpath>
 
-                <xpath expr="//field[@name='fabricant']" position="after">
+                <xpath expr="//field[@name='tableau']" position="after">
                    <field name="couleur_id"/>
                 </xpath>
 
@@ -82,7 +54,7 @@
         <field name="name">laboratoire.tree</field>
         <field name="model">laboratoire</field>
         <field name="arch" type="xml">
-            <tree string="Laboratoire">
+            <tree string="Laboratory">
                 <field name="code"/>
                 <field name="name"/>
                 <field name="contact_name"/>
@@ -95,7 +67,7 @@
         <field name="name">laboratoire.form</field>
         <field name="model">laboratoire</field>
         <field name="arch" type="xml">
-            <form string="Laboratoire">
+            <form string="Laboratory">
                <group col="4">
                   <field name="code"/>
                   <field name="name"/>
@@ -111,7 +83,7 @@
 		<field name="model">laboratoire</field>
 		<field name="priority" eval="15"/>
 		<field name="arch" type="xml">
-			<search string="Search Laboratoire">
+			<search string="Search Laboratory">
 				<field name="code"/>
             <field name="name"/>
 				<field name="contact_name"/>
@@ -121,7 +93,7 @@
 	</record>
 	
 	<record id="action_laboratoire" model="ir.actions.act_window">
-		<field name="name">Laboratoire</field>
+		<field name="name">Laboratory</field>
 		<field name="type">ir.actions.act_window</field>
 		<field name="res_model">laboratoire</field>
 		<field name="view_mode">tree,form</field>
@@ -129,13 +101,13 @@
 		<field name="context">{}</field>
 		<field name="help" type="html">
 			<p class="o_view_nocontent_smiling_face">
-				Nouveau Laboratoire 
+				New Laboratory 
 			</p>
 		</field>
 	</record>
 
     <menuitem id="inventory.laboratoire_menu"  parent="stock.menu_product_in_config_stock" action="action_laboratoire"
-     name="Laboratoire"/>
+     name="Laboratory"/>
 
 	
 	<record id="view_gamme_tree" model="ir.ui.view">
@@ -183,7 +155,7 @@
 		<field name="context">{}</field>
 		<field name="help" type="html">
 			<p class="o_view_nocontent_smiling_face">
-				Nouvelle Gamme
+				New Gamme
 			</p>
 		</field>
 	</record>
@@ -198,14 +170,45 @@
             <field name="model">product.template</field>
             <field name="inherit_id" ref="product.product_template_tree_view"/>
             <field name="arch" type="xml">
-              <tree string="Product" multi_edit="1" sample="1">
-                <header>
-                  <button string="Print Labels" type="object" name="action_open_label_layout"/>
-                </header>
-                <field name="atc_classe" optional="hide"/>
-              </tree>
+                <xpath expr="//tree" position="attributes">
+                    <attribute name="string">Product</attribute>
+                    <attribute name="multi_edit">1</attribute>
+                    <attribute name="sample">1</attribute>
+                </xpath>
+                <xpath expr="//tree" position="inside">
+                    <header>
+                        <button string="Print Labels" type="object" name="action_open_label_layout"/>
+                    </header>
+                    <field name="atc_classe" optional="hide"/>
+                    <field name="lot_number" optional="hide"/>
+                </xpath>
             </field>
-      </record> 
+       </record>
+
+       <record id="view_product_template_form" model="ir.ui.view">
+            <field name="name">product.template.form</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_form_view"/> <!-- Replace with the correct external ID -->
+            <field name="arch" type="xml">
+                <xpath expr="//notebook/page[position()=4]" position="after">
+                    <!-- Add a new page to the notebook -->
+                    <page string="Lots/Serial Numbers">
+                        <!-- Your content for the Lot Infos page goes here -->
+                        <field name="lot_number"/>
+                        <field name="lot_prices"/>
+
+                        
+                            <tree string="Product Templates">
+                                <field name="name"/>
+                              <!--  <field name="lot_ids" widget="one2many_list"/> -->
+                            </tree>
+                        
+
+                    </page>
+                </xpath>
+            </field>
+       </record>
+
 
       <record id="product_template_search" model="ir.ui.view">
         <field name="name">product.template.searches</field>
@@ -215,7 +218,7 @@
                <field name="atc_classe" filter_domain="[('atc_classe', 'child_of', raw_value)]"/>
                 <separator/>
                 <group expand="1" string="Group By">
-                    <filter string="Classe ATC" name="atc_classe" context="{'group_by':'atc_classe'}"/>
+                    <filter string="ATC Class" name="atc_classe" context="{'group_by':'atc_classe'}"/>
                 </group>
             </search>
          </field>
@@ -229,7 +232,7 @@
         <field name="context">{}</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
-                Create a new products
+                Create a new product
             </p>
         </field>
     </record>
@@ -238,7 +241,7 @@
         <field name="name">couleur.tree</field>
         <field name="model">couleur</field>
         <field name="arch" type="xml">
-            <tree string="Couleur">
+            <tree string="Color">
                 <field name="code"/>
                 <field name="name"/>
             </tree>
@@ -250,7 +253,7 @@
         <field name="name">couleur.form</field>
         <field name="model">couleur</field>
         <field name="arch" type="xml">
-            <form string="Couleur">
+            <form string="Color">
 				<group col="4">
 					<field name="code"/>
                <field name="name"/>
@@ -264,7 +267,7 @@
 		<field name="model">couleur</field>
 		<field name="priority" eval="15"/>
 		<field name="arch" type="xml">
-			<search string="Search Couleur">
+			<search string="Search Color">
 				<field name="code"/>
             <field name="name"/>
 		   </search>
@@ -272,7 +275,7 @@
 	</record>
 	
 	<record id="action_couleur" model="ir.actions.act_window">
-		<field name="name">Couleur</field>
+		<field name="name">Color</field>
 		<field name="type">ir.actions.act_window</field>
 		<field name="res_model">couleur</field>
 		<field name="view_mode">tree,form</field>
@@ -285,14 +288,14 @@
 		</field>
 	</record>
 
-    <menuitem name="Couleur"
+    <menuitem name="Color"
      id="inventory.color_menu"  parent="stock.menu_product_in_config_stock" action="action_couleur"/>
 
     <record id="view_fabricant_tree" model="ir.ui.view">
         <field name="name">fabricant.tree</field>
         <field name="model">fabricant</field>
         <field name="arch" type="xml">
-            <tree string="Fabricant">
+            <tree string="Manufacturer">
                 <field name="name"/>
                 <field name="description"/>
                 <field name="product_id"/>
@@ -304,7 +307,7 @@
         <field name="name">fabricant.form</field>
         <field name="model">fabricant</field>
         <field name="arch" type="xml">
-            <form string="Fabriant">
+            <form string="Manufacturer">
 				<group col="4">
 					<field name="name"/>
 					<field name="description"/>
@@ -319,7 +322,7 @@
 		<field name="model">fabricant</field>
 		<field name="priority" eval="15"/>
 		<field name="arch" type="xml">
-			<search string="Search Fabricant">
+			<search string="Search Manufacturer">
 				<field name="name"/>
             <field name="description"/>
             <field name="product_id"/>
@@ -328,7 +331,7 @@
 	</record>
 	
 	<record id="action_fabricant" model="ir.actions.act_window">
-		<field name="name">Fabricant</field>
+		<field name="name">Manufacturer</field>
 		<field name="type">ir.actions.act_window</field>
 		<field name="res_model">fabricant</field>
 		<field name="view_mode">tree,form</field>
@@ -336,19 +339,19 @@
 		<field name="context">{}</field>
 		<field name="help" type="html">
 			<p class="o_view_nocontent_smiling_face">
-				Nouveau fabricant des produits 
+				New Manufacturer of Products 
 			</p>
 		</field>
 	</record>
 
-    <menuitem name="Fabricant"
+    <menuitem name="Manufacturer"
      id="inventory.fabricant_menu"  parent="stock.menu_product_in_config_stock" action="action_fabricant"/>
 
     <record id="view_distributeur_tree" model="ir.ui.view">
         <field name="name">distributeur.tree</field>
         <field name="model">distributeur</field>
         <field name="arch" type="xml">
-            <tree string="Distributeur">
+            <tree string="Distributor">
                 <field name="code"/>
                 <field name="name"/>
             </tree>
@@ -359,7 +362,7 @@
         <field name="name">distributeur.form</field>
         <field name="model">distributeur</field>
         <field name="arch" type="xml">
-            <form string="Distrubuteur">
+            <form string="Distributor">
 				<group col="4">
 					<field name="code"/>
                <field name="name"/>
@@ -373,7 +376,7 @@
 		<field name="model">distributeur</field>
 		<field name="priority" eval="15"/>
 		<field name="arch" type="xml">
-			<search string="Search Distributeur">
+			<search string="Search Distributor">
 				<field name="code"/>
             <field name="name"/>
 		   </search>
@@ -381,7 +384,7 @@
 	</record>
 	
 	<record id="action_distributeur" model="ir.actions.act_window">
-		<field name="name">Distributeur</field>
+		<field name="name">Distributor</field>
 		<field name="type">ir.actions.act_window</field>
 		<field name="res_model">distributeur</field>
 		<field name="view_mode">tree,form</field>
@@ -389,12 +392,12 @@
 		<field name="context">{}</field>
 		<field name="help" type="html">
 			<p class="o_view_nocontent_smiling_face">
-				Nouveau Distributeur des produits
+				New Distributor of Products
 			</p>
 		</field>
 	</record>
 
-   <menuitem name="Distributeur"
+   <menuitem name="Distributor"
       id="inventory.distributeur_menu"  parent="stock.menu_product_in_config_stock" action="action_distributeur"/>
     
 
@@ -402,7 +405,7 @@
         <field name="name">famille.tree</field>
         <field name="model">famille</field>
         <field name="arch" type="xml">
-            <tree string="Famille du Produit">
+            <tree string="Product Family">
                 <field name="name"/>
                 <field name="famille"/>
                 <field name="description"/>
@@ -414,7 +417,7 @@
         <field name="name">famille.form</field>
         <field name="model">famille</field>
         <field name="arch" type="xml">
-            <form string="Famille du Produit">
+            <form string="Product Family">
                <group col="4">
                   <field name="name"/>
                   <field name="famille"/>
@@ -438,7 +441,7 @@
 	</record>
 	
 	<record id="action_famille" model="ir.actions.act_window">
-		<field name="name">Famille</field>
+		<field name="name">Family</field>
 		<field name="type">ir.actions.act_window</field>
 		<field name="res_model">famille</field>
 		<field name="view_mode">tree,form</field>
@@ -446,13 +449,13 @@
 		<field name="context">{}</field>
 		<field name="help" type="html">
 			<p class="o_view_nocontent_smiling_face">
-				Nouvelle Famille 
+				New Family 
 			</p>
 		</field>
 	</record>
 
     <menuitem id="inventory.famille_menu"  parent="stock.menu_product_in_config_stock" action="action_famille"
-     name="Famile du Produit"/>
+     name="Product Family"/>
 
   </data>
 </odoo>
