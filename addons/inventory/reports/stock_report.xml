@@ -32,7 +32,7 @@
 </record> -->
 
   <record id="action_report_product_product" model="ir.actions.report">
-        <field name="name">Entries Registers</field>
+        <field name="name">Entry Register</field>
         <field name="model">product.product</field>
         <field name="report_type">qweb-pdf</field>
         <field name="report_name">inventory.report_registres</field>

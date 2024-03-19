@@ -15,6 +15,10 @@
                    <field name="fabricant"/>
                 </xpath> 
 
+                <xpath expr="//field[@name='fabricant']" position="after">
+                   <field name="profit_sales"/>
+                </xpath> 
+
                 <xpath expr="//field[@name='categ_id']" position="after">
                    <field name="dci_id"/>
                 </xpath>
@@ -68,7 +72,7 @@
             <field name="inherit_id" ref="stock.view_production_lot_form"/>
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='ref']" position="before">
-                   <field name="price"/>
+                   <field name="price"> FCFA </field>
                 </xpath>
             </field>
       </record>  

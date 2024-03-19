@@ -1,23 +1,25 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "inventory",
+    'name': "Inventory",
 
     'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
-        subtitle on modules listing or apps.openerp.com""",
+        This module is an extension of the module Inventory already existing in odoo but including
+        more fields and features for products""",
 
     'description': """
-        Long description of module's purpose
+        This modules allows you to be give specific and detail information for each product you store 
+        in the pharmacy inventory and you are able to keep track of product entrying the stock and product
+        leaving the stock through detailled report you can print for each product  or for all the products saved in this module. 
     """,
 
-    'author': "My Company",
+    'author': "Ange Taffo",
     'website': "https://www.yourcompany.com",
 
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/16.0/odoo/addons/base/data/ir_module_category_data.xml
     # for the full list
-    'category': 'Uncategorized',
-    'version': '1.0.0',
+    'category': 'Stock',
+    'version': '1.0',
 
     # any module necessary for this one to work correctly
     'depends': ['stock'],

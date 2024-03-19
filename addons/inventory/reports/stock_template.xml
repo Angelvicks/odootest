@@ -8,7 +8,7 @@
                         <div class="oe_structure"/>
                            <div> 
                            <h1 style="text-align:center; font-weight: bold;">Product Acceptance Report</h1><br/>
-                            <div class="row p-3 text-center">
+                            <div class="row p-4 text-center">
 
                                 <div class="col-3">
                                     <p><span style="font-weight: bold;">Region : </span>
@@ -165,7 +165,7 @@
                                         </td>
                                         <td>
                                             <span t-field="doc.total_qty_received"/>
-                                            <span t-field="doc.available_qties"/>
+                                         <!--   <span t-field="doc.available_qties"/> -->
                                         </td>
                                         <td>
                                             <span t-field="doc.all_quantities"/>

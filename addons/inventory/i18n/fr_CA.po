@@ -1,0 +1,945 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* inventory
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0-20230925\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-12 07:31+0000\n"
+"PO-Revision-Date: 2024-03-12 07:31+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: inventory
+#: model:ir.model.fields,field_description:inventory.field_classe_atc__product_count
+msgid "# Products"
+msgstr "# Produits"
+
+#. module: inventory
+#: model_terms:ir.ui.view,arch_db:inventory.product_classe_form_view
+msgid "<span class=\"o_stat_text\">ATC Class</span>"
+msgstr "<span class=\"o_stat_text\">Classe ATC</span>"
+
+#. module: inventory
+#: model_terms:ir.ui.view,arch_db:inventory.product_dci_form_view
+msgid "<span class=\"o_stat_text\">DCI Name</span>"
+msgstr "<span class=\"o_stat_text\">Nom (DCI)</span>"
+
+#. module: inventory
+#: model_terms:ir.ui.view,arch_db:inventory.report_pvdereception
+msgid "<span style=\"font-weight: bold;\"> Delivery Dates :</span>"
+msgstr "<span style=\"font-weight: bold;\"> Dates de livraison :</span>"
+
+#. module: inventory
+#: model_terms:ir.ui.view,arch_db:inventory.report_pvdereception
+#: model_terms:ir.ui.view,arch_db:inventory.report_registres
+msgid ""
+"<span style=\"font-weight: bold;\"> Health District : </span>\n"
+"                                        <span> Akwa </span>"
+msgstr ""
+"<span style=\"font-weight: bold;\"> District de Santé : </span>\n"
+"                                        <span> Akwa </span>"
+
+#. module: inventory
+#: model_terms:ir.ui.view,arch_db:inventory.report_pvdereception
+msgid "<span style=\"font-weight: bold;\"> N° BL : </span>"
+msgstr ""
+
+#. module: inventory
+#: model_terms:ir.ui.view,arch_db:inventory.report_pvdereception
+#: model_terms:ir.ui.view,arch_db:inventory.report_registres
+msgid ""
+"<span style=\"font-weight: bold;\">Health Area : </span>\n"
+"                                    <span> Douala </span>"
+msgstr ""
+"<span style=\"font-weight: bold;\">Aire de Santé : </span>\n"
+"                                    <span> Douala </span>"
+
+#. module: inventory
+#: model_terms:ir.ui.view,arch_db:inventory.report_pvdereception
+#: model_terms:ir.ui.view,arch_db:inventory.report_registres
+msgid "<span style=\"font-weight: bold;\">Name of the Structure : </span>"
+msgstr "<span style=\"font-weight: bold;\">Nom de la Structure : </span>"
+
+#. module: inventory
+#: model_terms:ir.ui.view,arch_db:inventory.report_pvdereception
+msgid "<span style=\"font-weight: bold;\">N°BC : </span>"
+msgstr ""
+
+#. module: inventory
+#: model_terms:ir.ui.view,arch_db:inventory.report_pvdereception
+#: model_terms:ir.ui.view,arch_db:inventory.report_registres
+msgid ""
+"<span style=\"font-weight: bold;\">Region : </span>\n"
+"                                       <span> Littoral </span>"
+msgstr ""
+
+#. module: inventory
+#: model_terms:ir.ui.view,arch_db:inventory.report_pvdereception
+msgid "<span style=\"font-weight: bold;\">Supplier : </span>"
+msgstr "<span style=\"font-weight: bold;\">Fournisseur : </span>"
+
+#. module: inventory
+#: model_terms:ir.ui.view,arch_db:inventory.report_pvdereception
+msgid "<span>Accepted Quantity</span>"
+msgstr "<span>Quantité Acceptée</span>"
+
+#. module: inventory
+#: model_terms:ir.ui.view,arch_db:inventory.report_registres
+msgid "<span>Comments Name/Signature</span>"
+msgstr "<span>Observations Nom/Signature</span>"
+
+#. module: inventory
+#: model_terms:ir.ui.view,arch_db:inventory.report_registres
+msgid "<span>Date (jj/mm/YY) </span>"
+msgstr ""
+
+#. module: inventory
+#: model_terms:ir.ui.view,arch_db:inventory.report_pvdereception
+msgid "<span>Difference</span>"
+msgstr "<span>Ecart</span>"
+
+#. module: inventory
+#: model_terms:ir.ui.view,arch_db:inventory.report_pvdereception
+#: model_terms:ir.ui.view,arch_db:inventory.report_registres
+msgid "<span>Dosage</span>"
+msgstr ""
+
+#. module: inventory
+#: model_terms:ir.ui.view,arch_db:inventory.report_pvdereception
+#: model_terms:ir.ui.view,arch_db:inventory.report_registres
+msgid "<span>Expiration Date</span>"
+msgstr "<span>Date de Péremption</span>"
+
+#. module: inventory
+#: model_terms:ir.ui.view,arch_db:inventory.report_pvdereception
+#: model_terms:ir.ui.view,arch_db:inventory.report_registres
+msgid "<span>Galenic Form</span>"
+msgstr "<span>Forme Galénique</span>"
+
+#. module: inventory
+#: model_terms:ir.ui.view,arch_db:inventory.report_registres
+msgid "<span>Invoice/Delivery Note N° </span>"
+msgstr "<span>N° Fact/Bon de Livraison </span>"
+
+#. module: inventory
+#: model_terms:ir.ui.view,arch_db:inventory.report_pvdereception
+#: model_terms:ir.ui.view,arch_db:inventory.report_registres
+msgid "<span>Lot Numbers</span>"
+msgstr "<span>Numéro de Lot</span>"
+
+#. module: inventory
+#: model_terms:ir.ui.view,arch_db:inventory.report_pvdereception
+msgid "<span>Manufacturer</span>"
+msgstr "<span>Fabricant</span>"
+
+#. module: inventory
+#: model_terms:ir.ui.view,arch_db:inventory.report_pvdereception
+#: model_terms:ir.ui.view,arch_db:inventory.report_registres
+msgid "<span>Name (DCI) </span>"
+msgstr "<span>Nom (DCI) </span>"
+
+#. module: inventory
+#: model_terms:ir.ui.view,arch_db:inventory.report_registres
+msgid "<span>N° PVR </span>"
+msgstr ""
+
+#. module: inventory
+#: model_terms:ir.ui.view,arch_db:inventory.report_pvdereception
+msgid "<span>Observations</span>"
+msgstr ""
+
+#. module: inventory
+#: model_terms:ir.ui.view,arch_db:inventory.report_pvdereception
+msgid "<span>Order no.</span>"
+msgstr "<span>N° d'ordre</span>"
+
+#. module: inventory
+#: model_terms:ir.ui.view,arch_db:inventory.report_pvdereception
+#: model_terms:ir.ui.view,arch_db:inventory.report_registres
+msgid "<span>Packaging</span>"
+msgstr "<span>Conditionement</span>"
+
+#. module: inventory
+#: model_terms:ir.ui.view,arch_db:inventory.report_pvdereception
+msgid "<span>Quantity (Delivery Slip)</span>"
+msgstr "<span>Quantité (Bon de Livraison)</span>"
+
+#. module: inventory
+#: model_terms:ir.ui.view,arch_db:inventory.report_pvdereception
+#: model_terms:ir.ui.view,arch_db:inventory.report_registres
+msgid "<span>Quantity Received</span>"
+msgstr "<span>Quantité Acceptée</span>"
+
+#. module: inventory
+#: model_terms:ir.ui.view,arch_db:inventory.report_pvdereception
+msgid "<span>Rejected Quantity</span>"
+msgstr "<span>Quantité Rejetée</span>"
+
+#. module: inventory
+#: model_terms:ir.ui.view,arch_db:inventory.report_registres
+msgid "<span>Supplier</span>"
+msgstr "<span>Fournisseur</span>"
+
+#. module: inventory
+#: model:ir.actions.act_window,name:inventory.product_classe_action_form
+#: model:ir.model,name:inventory.model_classe_atc
+#: model:ir.model.fields,field_description:inventory.field_product_product__atc_classe
+#: model:ir.model.fields,field_description:inventory.field_product_template__atc_classe
+#: model:ir.ui.menu,name:inventory.classe_atc_menu
+#: model_terms:ir.ui.view,arch_db:inventory.product_classe_form_view
+#: model_terms:ir.ui.view,arch_db:inventory.product_classe_list_view
+#: model_terms:ir.ui.view,arch_db:inventory.product_classe_search_view
+#: model_terms:ir.ui.view,arch_db:inventory.product_product_form
+#: model_terms:ir.ui.view,arch_db:inventory.product_template_product_form
+#: model_terms:ir.ui.view,arch_db:inventory.product_template_search
+msgid "ATC Class"
+msgstr "Classe ATC"
+
+#. module: inventory
+#: model:ir.model.fields,field_description:inventory.field_classe_atc__code_atc
+#: model:ir.model.fields,field_description:inventory.field_dci_name__code_atc
+#: model_terms:ir.ui.view,arch_db:inventory.product_classe_form_view
+#: model_terms:ir.ui.view,arch_db:inventory.product_classe_list_view
+#: model_terms:ir.ui.view,arch_db:inventory.product_classe_search_view
+#: model_terms:ir.ui.view,arch_db:inventory.product_dci_form_view
+#: model_terms:ir.ui.view,arch_db:inventory.product_dci_list_view
+#: model_terms:ir.ui.view,arch_db:inventory.product_dci_search_view
+msgid "ATC Code"
+msgstr "Code ATC"
+
+#. module: inventory
+#: model:ir.actions.report,name:inventory.action_report_product_template
+msgid "Acceptance Report"
+msgstr "Procès Verbal de Reception"
+
+#. module: inventory
+#: model:ir.model.fields,field_description:inventory.field_product_product__all_inventory_diffs
+#: model:ir.model.fields,field_description:inventory.field_product_template__all_inventory_diffs
+msgid "All Inventory Differences"
+msgstr "Tous les écarts d'inventaire"
+
+#. module: inventory
+#: model:ir.model.fields,field_description:inventory.field_product_product__all_quantities
+#: model:ir.model.fields,field_description:inventory.field_product_template__all_quantities
+msgid "All Quantities"
+msgstr "Toutes les quantités"
+
+#. module: inventory
+#: model:ir.model.fields,field_description:inventory.field_product_product__available_qties
+#: model:ir.model.fields,field_description:inventory.field_product_template__available_qties
+msgid "Avalaible Quantities"
+msgstr "Quantités disponibles"
+
+#. module: inventory
+#: model:ir.model.fields,field_description:inventory.field_product_product__default_code
+#: model:ir.model.fields,field_description:inventory.field_product_template__default_code
+msgid "CIP Code"
+msgstr "Code CIP"
+
+#. module: inventory
+#: model:ir.model.fields,field_description:inventory.field_classe_atc__child_id
+msgid "Child Classes"
+msgstr "Classes d'enfants"
+
+#. module: inventory
+#: model:ir.model.fields,field_description:inventory.field_couleur__code
+#: model:ir.model.fields,field_description:inventory.field_distributeur__code
+#: model:ir.model.fields,field_description:inventory.field_famille__name
+#: model:ir.model.fields,field_description:inventory.field_gamme__code
+#: model:ir.model.fields,field_description:inventory.field_laboratoire__code
+msgid "Code"
+msgstr ""
+
+#. module: inventory
+#: model:ir.actions.act_window,name:inventory.action_couleur
+#: model:ir.model.fields,field_description:inventory.field_product_product__couleur_id
+#: model:ir.model.fields,field_description:inventory.field_product_template__couleur_id
+#: model:ir.ui.menu,name:inventory.color_menu
+#: model_terms:ir.ui.view,arch_db:inventory.view_couleur_form
+#: model_terms:ir.ui.view,arch_db:inventory.view_couleur_tree
+msgid "Color"
+msgstr "Couleur"
+
+#. module: inventory
+#: model:ir.model.fields,field_description:inventory.field_classe_atc__complete_name
+msgid "Complete Name"
+msgstr "Nom Complet"
+
+#. module: inventory
+#: model:ir.model.fields,field_description:inventory.field_product_template__standard_price
+msgid "Cost"
+msgstr ""
+
+#. module: inventory
+#: model:ir.model.fields,field_description:inventory.field_product_product__lot_prices
+#: model:ir.model.fields,field_description:inventory.field_product_template__lot_prices
+#: model:ir.model.fields,field_description:inventory.field_stock_lot__price
+msgid "Cost Price"
+msgstr "Prix de Revient"
+
+#. module: inventory
+#: model_terms:ir.actions.act_window,help:inventory.product_dci_action_form
+msgid "Create a new DCI name for your product"
+msgstr "Créez un nouveau nom ICD pour votre produit"
+
+#. module: inventory
+#: model_terms:ir.actions.act_window,help:inventory.product_classe_action_form
+msgid "Create a new class ATC for your product"
+msgstr "Créez une nouvelle classe ATC pour votre produit"
+
+#. module: inventory
+#: model_terms:ir.actions.act_window,help:inventory.product_template_action
+msgid "Create a new product"
+msgstr "Créer un nouveau produit"
+
+#. module: inventory
+#: model:ir.model.fields,field_description:inventory.field_classe_atc__create_uid
+#: model:ir.model.fields,field_description:inventory.field_couleur__create_uid
+#: model:ir.model.fields,field_description:inventory.field_dci_name__create_uid
+#: model:ir.model.fields,field_description:inventory.field_distributeur__create_uid
+#: model:ir.model.fields,field_description:inventory.field_fabricant__create_uid
+#: model:ir.model.fields,field_description:inventory.field_famille__create_uid
+#: model:ir.model.fields,field_description:inventory.field_gamme__create_uid
+#: model:ir.model.fields,field_description:inventory.field_laboratoire__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: inventory
+#: model:ir.model.fields,field_description:inventory.field_classe_atc__create_date
+#: model:ir.model.fields,field_description:inventory.field_couleur__create_date
+#: model:ir.model.fields,field_description:inventory.field_dci_name__create_date
+#: model:ir.model.fields,field_description:inventory.field_distributeur__create_date
+#: model:ir.model.fields,field_description:inventory.field_fabricant__create_date
+#: model:ir.model.fields,field_description:inventory.field_famille__create_date
+#: model:ir.model.fields,field_description:inventory.field_gamme__create_date
+#: model:ir.model.fields,field_description:inventory.field_laboratoire__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: inventory
+#: model:ir.actions.act_window,name:inventory.product_dci_action_form
+#: model:ir.model,name:inventory.model_dci_name
+#: model:ir.model.fields,field_description:inventory.field_dci_name__name
+#: model:ir.model.fields,field_description:inventory.field_product_product__dci_id
+#: model:ir.model.fields,field_description:inventory.field_product_template__dci_id
+#: model:ir.ui.menu,name:inventory.dci_menu
+#: model_terms:ir.ui.view,arch_db:inventory.product_dci_form_view
+#: model_terms:ir.ui.view,arch_db:inventory.product_dci_list_view
+#: model_terms:ir.ui.view,arch_db:inventory.product_dci_search_view
+msgid "DCI Name"
+msgstr "Nom DCI"
+
+#. module: inventory
+#: model_terms:ir.ui.view,arch_db:inventory.report_pvdereception
+msgid "Days"
+msgstr "Jours"
+
+#. module: inventory
+#: model:ir.model.fields,help:inventory.field_product_product__uom_po_id
+#: model:ir.model.fields,help:inventory.field_product_template__uom_po_id
+msgid ""
+"Default unit of measure used for purchase orders. It must be in the same "
+"category as the default unit of measure."
+msgstr ""
+"Unité de mesure par défaut utilisée pour les commandes. Elle doit être dans "
+"la même catégorie que l'unité de mesure par défaut."
+
+#. module: inventory
+#: model:ir.model.fields,field_description:inventory.field_product_product__quantity
+#: model:ir.model.fields,field_description:inventory.field_product_template__quantity
+msgid "Demand"
+msgstr "Demande"
+
+#. module: inventory
+#: model:ir.model.fields,field_description:inventory.field_fabricant__description
+#: model:ir.model.fields,field_description:inventory.field_famille__description
+msgid "Description"
+msgstr ""
+
+#. module: inventory
+#: model:ir.model.fields,field_description:inventory.field_classe_atc__display_name
+#: model:ir.model.fields,field_description:inventory.field_couleur__display_name
+#: model:ir.model.fields,field_description:inventory.field_dci_name__display_name
+#: model:ir.model.fields,field_description:inventory.field_distributeur__display_name
+#: model:ir.model.fields,field_description:inventory.field_fabricant__display_name
+#: model:ir.model.fields,field_description:inventory.field_famille__display_name
+#: model:ir.model.fields,field_description:inventory.field_gamme__display_name
+#: model:ir.model.fields,field_description:inventory.field_laboratoire__display_name
+msgid "Display Name"
+msgstr "Nom affiché"
+
+#. module: inventory
+#: model:ir.actions.act_window,name:inventory.action_distributeur
+#: model:ir.model.fields,field_description:inventory.field_product_product__distributeur_id
+#: model:ir.model.fields,field_description:inventory.field_product_template__distributeur_id
+#: model:ir.ui.menu,name:inventory.distributeur_menu
+#: model_terms:ir.ui.view,arch_db:inventory.view_distributeur_form
+#: model_terms:ir.ui.view,arch_db:inventory.view_distributeur_tree
+msgid "Distributor"
+msgstr "Distributeur"
+
+#. module: inventory
+#: model:ir.model.fields,field_description:inventory.field_product_product__done
+#: model:ir.model.fields,field_description:inventory.field_product_template__done
+msgid "Done"
+msgstr "Fait"
+
+#. module: inventory
+#: model:ir.model.fields,field_description:inventory.field_dci_name__dosage
+#: model_terms:ir.ui.view,arch_db:inventory.product_dci_form_view
+#: model_terms:ir.ui.view,arch_db:inventory.product_dci_list_view
+#: model_terms:ir.ui.view,arch_db:inventory.product_dci_search_view
+msgid "Dosage"
+msgstr ""
+
+#. module: inventory
+#: model_terms:ir.actions.act_window,help:inventory.action_couleur
+msgid "Enter a new color for your product."
+msgstr "Saisissez une nouvelle couleur pour votre produit."
+
+#. module: inventory
+#: model:ir.actions.report,name:inventory.action_report_product_product
+msgid "Entry Register"
+msgstr "Registres des Entrées"
+
+#. module: inventory
+#: model:ir.model.fields,field_description:inventory.field_product_product__expiration_dates
+#: model:ir.model.fields,field_description:inventory.field_product_template__expiration_dates
+msgid "Expiration Date"
+msgstr "Date d'expiration"
+
+#. module: inventory
+#: model_terms:ir.ui.view,arch_db:inventory.stock_lot_form
+msgid "FCFA"
+msgstr ""
+
+#. module: inventory
+#: model:ir.model.fields,field_description:inventory.field_famille__famille
+msgid "Families"
+msgstr "Familles"
+
+#. module: inventory
+#: model:ir.actions.act_window,name:inventory.action_famille
+msgid "Family"
+msgstr "Famille"
+
+#. module: inventory
+#: model:ir.model.fields,field_description:inventory.field_dci_name__forme
+#: model_terms:ir.ui.view,arch_db:inventory.product_dci_form_view
+#: model_terms:ir.ui.view,arch_db:inventory.product_dci_list_view
+#: model_terms:ir.ui.view,arch_db:inventory.product_dci_search_view
+msgid "Galenic Form"
+msgstr "Forme Galénique"
+
+#. module: inventory
+#: model:ir.actions.act_window,name:inventory.action_gamme
+#: model:ir.model.fields,field_description:inventory.field_product_product__gamme_id
+#: model:ir.model.fields,field_description:inventory.field_product_template__gamme_id
+#: model:ir.ui.menu,name:inventory.gamme_menu
+#: model_terms:ir.ui.view,arch_db:inventory.view_gamme_form
+#: model_terms:ir.ui.view,arch_db:inventory.view_gamme_tree
+msgid "Gamme"
+msgstr ""
+
+#. module: inventory
+#: model:ir.model.fields,help:inventory.field_product_template__packaging_ids
+msgid "Gives the different ways to package the same product."
+msgstr "Donne les différentes façons d'emballer le même produit."
+
+#. module: inventory
+#: model_terms:ir.ui.view,arch_db:inventory.product_template_search
+msgid "Group By"
+msgstr "Regrouper par"
+
+#. module: inventory
+#: model:ir.model.fields,field_description:inventory.field_classe_atc__id
+#: model:ir.model.fields,field_description:inventory.field_couleur__id
+#: model:ir.model.fields,field_description:inventory.field_dci_name__id
+#: model:ir.model.fields,field_description:inventory.field_distributeur__id
+#: model:ir.model.fields,field_description:inventory.field_fabricant__id
+#: model:ir.model.fields,field_description:inventory.field_famille__id
+#: model:ir.model.fields,field_description:inventory.field_gamme__id
+#: model:ir.model.fields,field_description:inventory.field_laboratoire__id
+msgid "ID"
+msgstr ""
+
+#. module: inventory
+#: model:ir.model.fields,help:inventory.field_product_template__standard_price
+msgid ""
+"In Standard Price & AVCO: value of the product (automatically computed in AVCO).\n"
+"        In FIFO: value of the next unit that will leave the stock (automatically computed).\n"
+"        Used to value the product when the purchase cost is not known (e.g. inventory adjustment).\n"
+"        Used to compute margins on sale orders."
+msgstr ""
+
+#. module: inventory
+#: model:ir.model.fields,help:inventory.field_product_product__inventory_diff
+#: model:ir.model.fields,help:inventory.field_product_template__inventory_diff
+msgid ""
+"Indicates the gap between the product's theoretical quantity and its counted"
+" quantity."
+msgstr ""
+"Indique l'écart entre la quantité théorique du produit et sa quantité "
+"comptée quantité."
+
+#. module: inventory
+#: model:ir.model.fields,field_description:inventory.field_product_product__inventory_diff
+#: model:ir.model.fields,field_description:inventory.field_product_template__inventory_diff
+msgid "Inventory Difference"
+msgstr "Écart d'inventaire"
+
+#. module: inventory
+#: model:ir.actions.act_window,name:inventory.action_laboratoire
+#: model:ir.model.fields,field_description:inventory.field_product_product__laboratoire_id
+#: model:ir.model.fields,field_description:inventory.field_product_template__laboratoire_id
+#: model:ir.ui.menu,name:inventory.laboratoire_menu
+#: model_terms:ir.ui.view,arch_db:inventory.view_laboratoire_form
+#: model_terms:ir.ui.view,arch_db:inventory.view_laboratoire_tree
+msgid "Laboratory"
+msgstr "Laboratoire"
+
+#. module: inventory
+#: model:ir.model.fields,field_description:inventory.field_classe_atc____last_update
+#: model:ir.model.fields,field_description:inventory.field_couleur____last_update
+#: model:ir.model.fields,field_description:inventory.field_dci_name____last_update
+#: model:ir.model.fields,field_description:inventory.field_distributeur____last_update
+#: model:ir.model.fields,field_description:inventory.field_fabricant____last_update
+#: model:ir.model.fields,field_description:inventory.field_famille____last_update
+#: model:ir.model.fields,field_description:inventory.field_gamme____last_update
+#: model:ir.model.fields,field_description:inventory.field_laboratoire____last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: inventory
+#: model:ir.model.fields,field_description:inventory.field_classe_atc__write_uid
+#: model:ir.model.fields,field_description:inventory.field_couleur__write_uid
+#: model:ir.model.fields,field_description:inventory.field_dci_name__write_uid
+#: model:ir.model.fields,field_description:inventory.field_distributeur__write_uid
+#: model:ir.model.fields,field_description:inventory.field_fabricant__write_uid
+#: model:ir.model.fields,field_description:inventory.field_famille__write_uid
+#: model:ir.model.fields,field_description:inventory.field_gamme__write_uid
+#: model:ir.model.fields,field_description:inventory.field_laboratoire__write_uid
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: inventory
+#: model:ir.model.fields,field_description:inventory.field_classe_atc__write_date
+#: model:ir.model.fields,field_description:inventory.field_couleur__write_date
+#: model:ir.model.fields,field_description:inventory.field_dci_name__write_date
+#: model:ir.model.fields,field_description:inventory.field_distributeur__write_date
+#: model:ir.model.fields,field_description:inventory.field_fabricant__write_date
+#: model:ir.model.fields,field_description:inventory.field_famille__write_date
+#: model:ir.model.fields,field_description:inventory.field_gamme__write_date
+#: model:ir.model.fields,field_description:inventory.field_laboratoire__write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: inventory
+#: model:ir.model.fields,field_description:inventory.field_product_product__lot_names
+#: model:ir.model.fields,field_description:inventory.field_product_template__lot_names
+msgid "Lot Names"
+msgstr "Nom des lots"
+
+#. module: inventory
+#: model:ir.model.fields,field_description:inventory.field_product_product__lot_info
+#: model:ir.model.fields,field_description:inventory.field_product_template__lot_info
+msgid "Lot Number"
+msgstr "Numéro de lot"
+
+#. module: inventory
+#: model:ir.model.fields,field_description:inventory.field_product_product__lot_ids
+#: model:ir.model.fields,field_description:inventory.field_product_template__lot_ids
+msgid "Lot Prices"
+msgstr "Prix des lots"
+
+#. module: inventory
+#: model:ir.model,name:inventory.model_stock_lot
+msgid "Lot/Serial"
+msgstr "Lot/Série"
+
+#. module: inventory
+#: model:ir.model.fields,field_description:inventory.field_product_product__lot_number
+#: model:ir.model.fields,field_description:inventory.field_product_template__lot_number
+#: model_terms:ir.ui.view,arch_db:inventory.view_product_template_form
+msgid "Lots/Serial Numbers"
+msgstr "Lots/Numéros de série"
+
+#. module: inventory
+#: model:ir.actions.act_window,name:inventory.action_fabricant
+#: model:ir.model.fields,field_description:inventory.field_product_product__fabricant
+#: model:ir.model.fields,field_description:inventory.field_product_template__fabricant
+#: model:ir.ui.menu,name:inventory.fabricant_menu
+#: model_terms:ir.ui.view,arch_db:inventory.view_fabricant_form
+#: model_terms:ir.ui.view,arch_db:inventory.view_fabricant_tree
+msgid "Manufacturer"
+msgstr "Fabricant"
+
+#. module: inventory
+#: model:ir.model.fields,field_description:inventory.field_fabricant__name
+msgid "Manufacturer's Name"
+msgstr "Nom du Fabricant"
+
+#. module: inventory
+#: model:ir.model.fields,field_description:inventory.field_classe_atc__name
+#: model:ir.model.fields,field_description:inventory.field_couleur__name
+#: model:ir.model.fields,field_description:inventory.field_distributeur__name
+#: model:ir.model.fields,field_description:inventory.field_gamme__name
+#: model:ir.model.fields,field_description:inventory.field_laboratoire__name
+msgid "Name"
+msgstr "Nom"
+
+#. module: inventory
+#: model:ir.model.fields,field_description:inventory.field_product_product__nom_de_la_structure
+#: model:ir.model.fields,field_description:inventory.field_product_template__nom_de_la_structure
+msgid "Name of the Structure"
+msgstr "Nom de la Structure"
+
+#. module: inventory
+#: model_terms:ir.actions.act_window,help:inventory.action_distributeur
+msgid "New Distributor of Products"
+msgstr "Nouveau Distributeur des produits"
+
+#. module: inventory
+#: model_terms:ir.actions.act_window,help:inventory.action_famille
+msgid "New Family"
+msgstr "Nouvelle Famille"
+
+#. module: inventory
+#: model_terms:ir.actions.act_window,help:inventory.action_gamme
+msgid "New Gamme"
+msgstr "Nouvelle Gamme"
+
+#. module: inventory
+#: model_terms:ir.actions.act_window,help:inventory.action_laboratoire
+msgid "New Laboratory"
+msgstr "Nouveau Laboratoire"
+
+#. module: inventory
+#: model_terms:ir.actions.act_window,help:inventory.action_fabricant
+msgid "New Manufacturer of Products"
+msgstr "Nouveau Fabricant des produits"
+
+#. module: inventory
+#: model_terms:ir.ui.view,arch_db:inventory.report_pvdereception
+msgid ""
+"N° PVR: \n"
+"                                            <span style=\"border-bottom: 1px solid black; height: 20px; width: 100px;\"> </span>"
+msgstr ""
+
+#. module: inventory
+#: model:ir.model.fields,field_description:inventory.field_product_template__packaging_ids
+msgid "Packaging"
+msgstr "Conditionement"
+
+#. module: inventory
+#: model:ir.model.fields,field_description:inventory.field_product_product__packaging_names
+#: model:ir.model.fields,field_description:inventory.field_product_template__packaging_names
+msgid "Packaging Names"
+msgstr "Nom de Conditionement"
+
+#. module: inventory
+#: model:ir.model.fields,field_description:inventory.field_classe_atc__parent_id
+msgid "Parent ATC Class"
+msgstr "Classe ATC Mère"
+
+#. module: inventory
+#: model:ir.model.fields,field_description:inventory.field_classe_atc__parent_path
+msgid "Parent Path"
+msgstr "Chemin parent"
+
+#. module: inventory
+#: model:ir.model.fields,field_description:inventory.field_product_product__partner_id
+#: model:ir.model.fields,field_description:inventory.field_product_template__partner_id
+msgid "Partner"
+msgstr "Partenaire"
+
+#. module: inventory
+#: model:ir.model.fields,field_description:inventory.field_laboratoire__tel
+msgid "Phone Number"
+msgstr "Numèro de Téléphone"
+
+#. module: inventory
+#: model:ir.model.fields,help:inventory.field_product_product__list_price
+#: model:ir.model.fields,help:inventory.field_product_template__list_price
+msgid "Price at which the product is sold to customers."
+msgstr "Prix auquel le produit est vendu aux clients."
+
+#. module: inventory
+#: model_terms:ir.ui.view,arch_db:inventory.product_template_tree
+msgid "Print Labels"
+msgstr "Imprimer les étiquettes"
+
+#. module: inventory
+#: model:ir.actions.act_window,name:inventory.product_template_action
+#: model:ir.model,name:inventory.model_product_template
+#: model_terms:ir.ui.view,arch_db:inventory.product_template_search
+#: model_terms:ir.ui.view,arch_db:inventory.product_template_tree
+msgid "Product"
+msgstr "Produit"
+
+#. module: inventory
+#: model_terms:ir.ui.view,arch_db:inventory.report_pvdereception
+msgid "Product Acceptance Report"
+msgstr "Rapport de Réception des Produits"
+
+#. module: inventory
+#: model_terms:ir.ui.view,arch_db:inventory.report_registres
+msgid "Product Entry Register"
+msgstr "Registre des Entrées des Produits"
+
+#. module: inventory
+#: model:ir.ui.menu,name:inventory.famille_menu
+#: model_terms:ir.ui.view,arch_db:inventory.view_famille_form
+#: model_terms:ir.ui.view,arch_db:inventory.view_famille_tree
+msgid "Product Family"
+msgstr "Famille du Produit"
+
+#. module: inventory
+#: model:ir.model.fields,field_description:inventory.field_stock_lot__product_lot
+msgid "Product Template"
+msgstr "Modèle de produit"
+
+#. module: inventory
+#: model_terms:ir.ui.view,arch_db:inventory.view_product_template_form
+msgid "Product Templates"
+msgstr "Modèle de produit"
+
+#. module: inventory
+#: model:ir.model,name:inventory.model_product_product
+msgid "Product Variant"
+msgstr "Variante de produit"
+
+#. module: inventory
+#: model:ir.model.fields,field_description:inventory.field_product_product__famille_id
+#: model:ir.model.fields,field_description:inventory.field_product_template__famille_id
+msgid "Product family"
+msgstr "Famille du Produit"
+
+#. module: inventory
+#: model:ir.model.fields,field_description:inventory.field_dci_name__product_id
+#: model:ir.model.fields,field_description:inventory.field_fabricant__product_id
+#: model_terms:ir.ui.view,arch_db:inventory.product_dci_form_view
+#: model_terms:ir.ui.view,arch_db:inventory.product_dci_list_view
+#: model_terms:ir.ui.view,arch_db:inventory.product_dci_search_view
+msgid "Products"
+msgstr "Produits"
+
+#. module: inventory
+#: model:ir.model.fields,field_description:inventory.field_product_product__product_fournisseur_ids
+#: model:ir.model.fields,field_description:inventory.field_product_template__product_fournisseur_ids
+msgid "Products Supplier"
+msgstr "Fournisseur de produits"
+
+#. module: inventory
+#: model:ir.model.fields,field_description:inventory.field_product_product__uom_po_id
+#: model:ir.model.fields,field_description:inventory.field_product_template__uom_po_id
+msgid "Purchase"
+msgstr "Achat"
+
+#. module: inventory
+#: model:ir.model.fields,field_description:inventory.field_product_product__purchase_order_ids
+msgid "Purchase Orders"
+msgstr "Bon de Commande"
+
+#. module: inventory
+#: model:ir.model.fields,field_description:inventory.field_product_product__quantitys
+#: model:ir.model.fields,field_description:inventory.field_product_template__quantitys
+msgid "Quantity"
+msgstr "Quantité"
+
+#. module: inventory
+#: model:ir.model.fields,help:inventory.field_product_product__quantitys
+#: model:ir.model.fields,help:inventory.field_product_template__quantitys
+msgid ""
+"Quantity of products in this quant, in the default unit of measure of the "
+"product"
+msgstr ""
+"Quantité de produits dans ce quant, dans l'unité de mesure par défaut du "
+"produit"
+
+#. module: inventory
+#: model:ir.model.fields,field_description:inventory.field_product_template__stock_quant_ids
+msgid "Quants"
+msgstr ""
+
+#. module: inventory
+#: model:ir.model.fields,field_description:inventory.field_laboratoire__contact_name
+msgid "Responsible's Name"
+msgstr "Nom du Responsable"
+
+#. module: inventory
+#: model:ir.model.fields,field_description:inventory.field_product_product__profit_sales
+#: model:ir.model.fields,field_description:inventory.field_product_template__profit_sales
+msgid "Sales Margin (%)"
+msgstr "Marge commerciale (%)"
+
+#. module: inventory
+#: model:ir.model.fields,field_description:inventory.field_product_product__list_price
+#: model:ir.model.fields,field_description:inventory.field_product_template__list_price
+msgid "Sales Price"
+msgstr "Prix de vente"
+
+#. module: inventory
+#: model_terms:ir.ui.view,arch_db:inventory.view_couleur_filter
+msgid "Search Color"
+msgstr "Recherche de Couleur"
+
+#. module: inventory
+#: model_terms:ir.ui.view,arch_db:inventory.view_distributeur_filter
+msgid "Search Distributor"
+msgstr "Recherche de Distributeur"
+
+#. module: inventory
+#: model_terms:ir.ui.view,arch_db:inventory.view_famille_filter
+msgid "Search Family"
+msgstr "Recherche de Famille"
+
+#. module: inventory
+#: model_terms:ir.ui.view,arch_db:inventory.view_gamme_filter
+msgid "Search Gamme"
+msgstr "Recherche de Gamme"
+
+#. module: inventory
+#: model_terms:ir.ui.view,arch_db:inventory.view_laboratoire_filter
+msgid "Search Laboratory"
+msgstr "Recherche de Laboratoire"
+
+#. module: inventory
+#: model_terms:ir.ui.view,arch_db:inventory.view_fabricant_filter
+msgid "Search Manufacturer"
+msgstr "Recherche de Fabricant"
+
+#. module: inventory
+#: model:ir.model.fields,field_description:inventory.field_product_product__stock_ids
+msgid "Stock Lots"
+msgstr "Lots de Stock"
+
+#. module: inventory
+#: model:ir.model.fields,field_description:inventory.field_product_product__partner_ids
+#: model:ir.model.fields,field_description:inventory.field_product_template__partner_ids
+msgid "Stock Partner"
+msgstr "Partenaire de Stock"
+
+#. module: inventory
+#: model:ir.model.fields,field_description:inventory.field_product_product__stock_picking
+msgid "Stock Picking"
+msgstr ""
+
+#. module: inventory
+#: model:ir.model.fields,field_description:inventory.field_product_product__stock_names
+#: model:ir.model.fields,field_description:inventory.field_product_template__stock_names
+msgid "Stock Picking Names"
+msgstr ""
+
+#. module: inventory
+#: model:ir.model.fields,field_description:inventory.field_product_product__stock_origin
+#: model:ir.model.fields,field_description:inventory.field_product_template__stock_origin
+msgid "Stock Picking Origin"
+msgstr ""
+
+#. module: inventory
+#: model:ir.model.fields,field_description:inventory.field_product_product__stock_dates
+#: model:ir.model.fields,field_description:inventory.field_product_template__stock_dates
+msgid "Stock date"
+msgstr "Date du Stock"
+
+#. module: inventory
+#: model:ir.model,name:inventory.model_product_supplierinfo
+msgid "Supplier Pricelist"
+msgstr "Liste de prix du fournisseur"
+
+#. module: inventory
+#: model:ir.model.fields,help:inventory.field_product_product__product_fournisseur_ids
+#: model:ir.model.fields,help:inventory.field_product_template__product_fournisseur_ids
+msgid "Supplier-related products"
+msgstr "Produits liés au fournisseur"
+
+#. module: inventory
+#: model:ir.model.fields,field_description:inventory.field_product_product__tableau
+#: model:ir.model.fields,field_description:inventory.field_product_template__tableau
+msgid "Table"
+msgstr ""
+
+#. module: inventory
+#: model:ir.model.fields,help:inventory.field_classe_atc__product_count
+msgid ""
+"The number of products under this category (Does not consider the children "
+"categories)"
+msgstr ""
+"Le nombre de produits sous cette catégorie (Ne prend pas en compte les "
+"catégories enfants )"
+
+#. module: inventory
+#: model:ir.model.fields,field_description:inventory.field_product_product__total_qty_received
+#: model:ir.model.fields,field_description:inventory.field_product_template__total_qty_received
+msgid "Total Quantity Received"
+msgstr "Quantité Totale Reçue"
+
+#. module: inventory
+#. odoo-python
+#: code:addons/inventory/models/classe.py:0
+#, python-format
+msgid "You cannot create recursive classe ATC."
+msgstr "Vous ne pouvez pas créer de classe ATC récursive."
+
+#. module: inventory
+#: model:ir.model,name:inventory.model_couleur
+msgid "couleur"
+msgstr ""
+
+#. module: inventory
+#: model:ir.model,name:inventory.model_distributeur
+msgid "distributeur"
+msgstr ""
+
+#. module: inventory
+#: model_terms:ir.ui.view,arch_db:inventory.product_dci_form_view
+msgid "e.g. 2000 mg"
+msgstr ""
+
+#. module: inventory
+#: model_terms:ir.ui.view,arch_db:inventory.product_classe_form_view
+#: model_terms:ir.ui.view,arch_db:inventory.product_dci_form_view
+msgid "e.g. A01"
+msgstr "par ex. A01"
+
+#. module: inventory
+#: model_terms:ir.ui.view,arch_db:inventory.product_dci_form_view
+msgid "e.g. Fluogel"
+msgstr "par ex. Fluogel"
+
+#. module: inventory
+#: model_terms:ir.ui.view,arch_db:inventory.product_classe_form_view
+msgid "e.g. Lamps"
+msgstr "par ex. Lampes"
+
+#. module: inventory
+#: model_terms:ir.ui.view,arch_db:inventory.product_dci_form_view
+msgid "e.g. Tablets, Capsules"
+msgstr "par ex. Comprimés, Gélules"
+
+#. module: inventory
+#: model:ir.model,name:inventory.model_fabricant
+msgid "fabricant"
+msgstr ""
+
+#. module: inventory
+#: model:ir.model,name:inventory.model_famille
+msgid "famille"
+msgstr ""
+
+#. module: inventory
+#: model:ir.model,name:inventory.model_gamme
+msgid "gamme"
+msgstr ""
+
+#. module: inventory
+#: model:ir.model,name:inventory.model_laboratoire
+msgid "laboratoire"
+msgstr ""

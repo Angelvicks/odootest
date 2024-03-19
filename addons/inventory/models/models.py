@@ -41,8 +41,7 @@ class stock(models.Model):
     _inherit = 'stock.lot'
 
     #ref = fields.Char(string = 'CIP Code')
-    price = fields.Char(string = 'Cost Price')
-
+    price = fields.Float(string = 'Cost Price')
     product_lot = fields.Many2one('product.template', string='Product Template')
    
 

@@ -28,7 +28,51 @@ class Product(models.Model):
     gamme_id = fields.Many2one('gamme', string="Gamme")
     couleur_id = fields.Many2one('couleur', string="Color")
     famille_id = fields.Many2one('famille', string="Product family")
-                               
+
+    profit_sales = fields.Float(string='Sales Margin (%)')
+
+    lot_ids = fields.One2many('stock.lot', 'product_lot', string='Lot Prices')
+    standard_price = fields.Float(compute='_compute_standard_price')
+    list_price=fields.Float(compute='_compute_list_price')
+
+    @api.depends('standard_price', 'profit_sales')
+    def _compute_list_price(self):
+            for rec in self:
+                # Assuming profit_sales is the profit margin percentage
+                marge = rec.standard_price + (rec.standard_price * rec.profit_sales / 100)
+                rec.list_price = marge
+
+    @api.depends('product_variant_ids')
+    def _compute_standard_price(self):
+        for template in self:
+            # Assuming a Many2many or One2many relationship from product.product (product_variant_ids) to stock.lot (stock_lot_ids)
+            # and that stock_lot_ids is a field on product.product representing the related stock.lot records
+            # This example simply takes the last related stock lot's price; adjust the logic as needed for your use case
+            search_domain = [
+                ('product_id', 'in', template.product_variant_ids.ids),
+                ('product_qty', '>', 0),
+                ('expiration_date', '!=', False),
+                ('price', '>', 0)  # Assuming the field is named price
+            ]
+            # Find lots matching the criteria, ordered by expiration date and creation date
+            lots = self.env['stock.lot'].search(search_domain, order='expiration_date ASC, create_date ASC')
+            
+            # Loop through the sorted lots to find the first one with a non-zero quantity
+            for lot in lots:
+                if lot.product_qty > 0:  # Make sure to use the correct field name for quantity in stock.lot
+                    template.standard_price = lot.price
+                    #break  # Exit the loop after updating the price with the first matching lot
+                # If no lot with a non-zero quantity is found, standard_price remains unchanged
+                else:
+                    template.standard_price = template.standard_price
+
+            """latest_lot = self.env['stock.lot'].search(search_domain, order='expiration_date ASC, create_date ASC', limit=1)
+            if latest_lot:
+                template.standard_price = latest_lot.price
+            else:
+                template.standard_price = template.standard_price
+            # If no suitable lot is found, do not explicitly set standard_price; it will retain its current value"""
+                             
 
     def _read_group_atc_classe(self, categories, domain, order):
         category_ids = self.env.context.get('default_atc_classe')
@@ -297,7 +341,7 @@ class Product(models.Model):
             template.lot_prices = ', '.join(lot_prices)
 
     
-    lot_ids = fields.One2many('stock.lot', 'product_lot', string='Lot Prices')
+   
     #compute='_compute_lot_price'
 
     @api.depends('product_variant_ids.stock_ids')

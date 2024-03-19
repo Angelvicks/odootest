@@ -16,6 +16,10 @@
                 </xpath> 
 
                 <xpath expr="//field[@name='uom_po_id']" position="after">
+                   <field name="profit_sales"/>
+                </xpath>
+
+                <xpath expr="//field[@name='uom_po_id']" position="after">
                    <field name="fabricant"/>
                 </xpath> 
 
@@ -432,7 +436,7 @@
 		<field name="model">famille</field>
 		<field name="priority" eval="15"/>
 		<field name="arch" type="xml">
-			<search string="Search Famille">
+			<search string="Search Family">
 				<field name="name"/>
                 <field name="famille"/>
                 <field name="description"/>
